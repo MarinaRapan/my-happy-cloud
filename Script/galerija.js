@@ -30,6 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
               p,
               `(${data.length} proizvoda)`
             );
+            // izračunaj apsolutni base iz kojeg dalje gradimo URL-ove slika
+            const a = document.createElement("a");
+            a.href = p; // npr. "Script/products.json" → "https://.../<repo>/Script/products.json"
+            window.__ASSET_BASE = a.href.replace(
+              /Script\/products\.json(\?.*)?$/,
+              ""
+            );
+            console.log("[Galerija] Asset base:", window.__ASSET_BASE);
+
             return data;
           }
         }
@@ -98,20 +107,25 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   })();
 
-  // 2) URL slika — RELATIVE za GitHub Pages (bez leading '/')
+  // URL slika — sigurno za GH Pages (gradi iz __ASSET_BASE)
   const imgUrl = (src) => {
     if (!src) return "";
-    let s = String(src).trim();
-    s = s.replace(/\\\\/g, "/"); // backslash → slash
-    s = s.replace(/(^|[^:])\/{2,}/g, (_, a) => (a || "") + "/"); // collapse // (ne nakon protokola)
-
-    // ❌ NE radimo: if (/^(Slike|Style|Script)\//i.test(s)) s = "/" + s;
-    // ✅ Umjesto toga: prisilno relativno (./) i bez leading slasha
-    if (!/^(https?:)?\/\//i.test(s)) {
-      s = s.replace(/^\/+/, ""); // skini sve početne '/'
-      if (!s.startsWith("./")) s = "./" + s;
+    let s = String(src)
+      .trim()
+      .replace(/\\\\/g, "/") // backslash → slash
+      .replace(/(^|[^:])\/{2,}/g, (_, a) => (a || "") + "/"); // collapse //
+    // već apsolutno? vrati odmah
+    if (/^(https?:)?\/\//i.test(s)) return s;
+    // ukloni leading '/' da ne ode na domain root
+    s = s.replace(/^\/+/, "");
+    // ako imamo base, složi apsolutni URL spram repo base-a
+    if (window.__ASSET_BASE) {
+      try {
+        return new URL(s, window.__ASSET_BASE).href;
+      } catch {}
     }
-    return encodeURI(s);
+    // fallback: relativno (radi lokalno)
+    return s.startsWith("./") ? s : "./" + s;
   };
 
   // 3) DOM targets
