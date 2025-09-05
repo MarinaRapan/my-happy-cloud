@@ -1,0 +1,777 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img,
+picture,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+video,
+iframe {
+  max-width: 100%;
+  height: auto !important;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+  margin: 5px;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e3e3e3;
+  border: solid 4px #333;
+  padding: 12px 16px;
+  height: auto;
+  min-height: 120px;
+  gap: 16px;
+}
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1 1 auto;
+  width: auto;
+  padding-left: 0;
+}
+.branding {
+  display: flex;
+  align-items: center;
+}
+h1 {
+  font-family: "Lato", sans-serif;
+  font-size: clamp(28px, 3.2vw + 1rem, 60px); /* umjesto 60px */
+  text-transform: uppercase;
+  margin: 0;
+  background: linear-gradient(
+    120deg,
+    #5b3d50,
+    #f0c000,
+    #5b3d50,
+    #6699cc,
+    #3b2633
+  );
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+  letter-spacing: 1px;
+  font-weight: 600;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.right-logo {
+  flex: 0 0 160px;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  border-top: 2px solid rgb(54, 45, 54);
+  padding-top: 10px;
+  margin: 0;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+.nav-list li {
+  background-color: rgb(54, 45, 54);
+  padding: 8px 12px;
+  text-align: center;
+  position: relative;
+}
+.nav-list li a {
+  color: #e3e3e3;
+  text-decoration: none;
+  font-family: "moderrat", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.nav-list li a:hover,
+.nav-list li a:focus {
+  color: #bcd8f3;
+  outline: none;
+}
+.nav-list li:hover {
+  background-color: rgb(75, 65, 75);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(75, 65, 75);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  z-index: 1;
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: #fff;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #3b2633;
+  text-decoration: underline;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:focus-within .dropdown-content {
+  display: block;
+}
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#modal .modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+}
+#modal .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+/* ===== CART MODAL (shared) ===== */
+body #cart-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: none;
+  z-index: 20000;
+}
+body #cart-modal.show {
+  display: grid !important;
+  place-items: center;
+}
+#cart-modal .modal-details {
+  overflow-wrap: anywhere;
+}
+#cart-modal .modal-content {
+  position: relative;
+  width: clamp(280px, 90vw, 380px);
+  max-height: 90dvh;
+  overflow: auto;
+  padding: 18px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+#cart-modal .modal-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+  display: block;
+}
+#cart-modal .close-modal {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 100px;
+  padding: 2px 8px;
+  background: #fff;
+  cursor: pointer;
+  color: #5b3d50;
+}
+body.modal-open {
+  overflow: hidden !important;
+}
+
+/* Qty stepper (za input #modal-quantity) */
+#cart-modal .qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+#cart-modal .qty-btn {
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #f6f6f6;
+  cursor: pointer;
+  line-height: 1;
+}
+#cart-modal .qty-btn:active {
+  transform: translateY(1px);
+}
+
+#search {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin: 10px 0;
+}
+
+#search input {
+  padding: 10px 14px; /* malo udobnije */
+  border: 1px solid #ccc;
+  border-radius: 999px; /* full pill */
+  flex: 1 1 320px; /* širi se, ali ima i bazu */
+  min-width: 0;
+}
+#search button {
+  background-color: #5b3d50;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+#search button:hover {
+  background-color: #f0c000;
+}
+#vrh {
+  background-color: #5b3d50;
+  text-align: center;
+  border: solid 4px #333;
+}
+#vrh a {
+  color: #fff;
+  text-decoration: none;
+}
+#vrh a:hover {
+  text-decoration: underline;
+}
+#product-modal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 30px 10px;
+}
+#product-modal .card {
+  width: 280px;
+  max-width: min(90vw, 360px); /* spriječi preširoko na fabletima */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+}
+#product-modal .card:hover {
+  transform: translateY(-5px);
+}
+#product-modal .card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+#product-modal .card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #5b3d50;
+}
+#product-modal .card h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+#product-modal .card p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+#product-modal .more-btn {
+  display: inline-block;
+  background-color: rgb(91, 61, 80);
+  color: white;
+  text-align: center;
+  padding: 8px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  margin-top: 10px;
+  cursor: pointer;
+}
+#cart-modal button {
+  cursor: pointer;
+}
+footer {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #333;
+  border: 4px solid #333;
+  border-top: none;
+}
+footer > div ul {
+  display: inline-block;
+}
+footer > div ul li {
+  list-style: none;
+}
+footer > div ul li a {
+  color: #e3e3e3;
+  text-decoration: none;
+}
+footer p {
+  color: #e3e3e3;
+  text-align: center;
+}
+/* centriraj kartične ikone u footeru */
+footer .div2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* razmak između ikona */
+  flex-wrap: wrap; /* da se lijepo prelamaju na mobitelu */
+  margin-top: 8px; /* malo zraka od teksta iznad */
+}
+
+footer .div2 a {
+  display: inline-flex;
+}
+
+footer .div2 img {
+  height: auto; /* poštuj HTML dimenzije (width="50px"/"40px") */
+  max-width: 100%;
+}
+
+/* --- Large tablets & small desktops --- */
+@media (max-width: 1024px) {
+  .right-logo {
+    flex-basis: 140px;
+  }
+  .nav-list li {
+    padding: 8px 12px;
+  }
+}
+
+/* --- Tablets / landscape phones --- */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 12px;
+  }
+  .branding {
+    justify-content: center;
+    text-align: center;
+  }
+  .right-logo {
+    order: -1;
+    align-self: center;
+    flex-basis: 120px;
+  }
+  .nav-list {
+    justify-content: center;
+    border-top: none;
+    margin-top: 4px;
+    padding-top: 4px;
+    align-items: flex-start;
+  }
+  .nav-list li {
+    padding: 7px 10px;
+  }
+}
+
+/* --- Small phones --- */
+@media (max-width: 560px) {
+  body {
+    margin: 4px;
+  }
+  .nav-list {
+    gap: 8px;
+  }
+  .nav-list li {
+    padding: 6px 8px;
+  }
+  #search {
+    margin: 8px 0;
+  }
+  .right-logo {
+    flex-basis: 96px;
+  }
+}
+/* Fix: mali ekrani — dropdown da NE rasteže susjede */
+@media (max-width: 760px) {
+  .nav-list {
+    align-items: flex-start;
+  }
+  .nav-list li {
+    position: relative;
+  } /* sidro za overlay */
+  .dropdown .dropdown-content {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 1000;
+    min-width: 220px;
+    max-width: 90vw;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  /* na mobu otvaramo klikom (JS + .open) — bez :hover */
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+}
+
+@media (min-width: 761px) {
+  .dropdown:hover .dropdown-content,
+  .dropdown:focus-within .dropdown-content {
+    display: block;
+  }
+}
+/* AUTH status i Odjava */
+.nav-list li#authStatus {
+  color: #e3e3e3;
+  font-weight: 600;
+  border: 1px solid rgba(255, 211, 77, 0.35);
+  padding-top: 10px;
+}
+
+.nav-list a#logoutLink {
+  color: #ffd34d;
+}
+.nav-list a#logoutLink:hover,
+.nav-list a#logoutLink:focus {
+  color: #ffe27a;
+  text-decoration: underline;
+}
+/* Košarica u navigaciji */
+.nav-list a#navCart {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  line-height: 1;
+}
+
+/* ✅ ispravno: jedan ::before selektor */
+.nav-list a#navCart::before {
+  content: "🛒"; /* promijeni u 🛍️ ako želiš “kolica” vibe */
+  font-size: 1.05em;
+  line-height: 1;
+  transform: translateY(1px);
+  margin-right: 6px;
+}
+
+/* Badge s brojem artikala */
+.badge {
+  display: inline-flex; /* centriraj broj u kapsuli */
+  align-items: center;
+  justify-content: center;
+  height: 20px; /* ključ: fiksna visina */
+  min-width: 22px;
+  padding: 0 6px; /* bez vertikalnog paddinga */
+  border-radius: 999px;
+  border: 2px solid #ffd34d;
+  color: #ffd34d;
+  background: #ffd34d;
+  color: #342d36;
+  font-weight: 800;
+  font-size: 0.8em; /* malo manjim da stane uz tekst */
+  line-height: 1; /* bez dodatne visine iz fonta */
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-variant-numeric: tabular-nums;
+  vertical-align: middle;
+}
+/* === CART PANEL (global) === */
+
+/* ===== CART TOAST ===== */
+#cartToast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(72px + env(safe-area-inset-bottom, 0px));
+  transform: translate(-50%, 8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  background: #f0c000;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 12px;
+  z-index: 30000;
+  font-size: 0.95rem;
+}
+#cartToast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+@media (max-width: 480px) {
+  #cartToast {
+    bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+  }
+}
+[hidden] {
+  display: none !important;
+}
+/* ===== Paginacija (shared) ===== */
+.pagination {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  margin: 16px 0 24px;
+  flex-wrap: wrap;
+}
+.pagination .page-indicator {
+  font-weight: 600;
+  opacity: 0.85;
+}
+.pagination button {
+  appearance: none;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.1s ease;
+}
+.pagination button:hover:not(:disabled) {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-1px);
+}
+.pagination button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.pagination {
+  display: flex !important;
+}
+/* === CART PANEL — suptilni redizajn (2025-09-05) === */
+
+#cartPanel .cart-close:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 0 0 4px var(--mhc-ring) inset !important;
+  transform: rotate(8deg) scale(1.02) !important;
+}
+
+.cart-qty .qty-dec,
+.cart-qty .qty-dec:hover,
+.cart-qty .qty-inc:hover {
+  border-color: var(--mhc-accent) !important;
+  box-shadow: 0 0 0 4px var(--mhc-ring) !important;
+}
+
+.cart-remove:hover {
+  border-color: var(--mhc-accent) !important;
+  box-shadow: 0 0 0 4px var(--mhc-ring) !important;
+}
+
+/* === CART PANEL — unified clean (2025-09-05) === */
+#cartOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.2s;
+  z-index: 9998;
+}
+#cartOverlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#cartPanel {
+  /* layout + dimenzije */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(420px, 92vw);
+  height: 100%;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+
+  /* paleta i “mekši” look */
+  --mhc-accent: #6699cc;
+  --mhc-ink: #2f2a2f;
+  --mhc-card: #fff;
+  --mhc-card-2: #faf8fb;
+  --mhc-border: #e8e6ea;
+  --mhc-ring: rgba(91, 61, 80, 0.18);
+  background: linear-gradient(180deg, var(--mhc-card), var(--mhc-card-2));
+  border-left: 1px solid var(--mhc-border);
+  border-radius: 18px 0 0 18px;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.15), 0 2px 10px rgba(0, 0, 0, 0.06);
+  color: var(--mhc-ink);
+}
+#cartPanel.open {
+  transform: translateX(0);
+}
+
+#cartPanel header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, #74a7d8, var(--mhc-accent));
+  color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  border-top-left-radius: 18px;
+}
+#cartPanel h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.2px;
+}
+#cartPanel .cart-close {
+  border: none;
+  background: transparent;
+  color: #fff;
+  width: 34px;
+  height: 34px;
+  line-height: 1;
+  font-size: 22px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+#cartPanel .cart-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 4px var(--mhc-ring) inset;
+  transform: rotate(8deg) scale(1.02);
+}
+
+#cartItemsList {
+  padding: 14px 16px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: transparent;
+}
+.cart-empty {
+  opacity: 0.75;
+}
+
+.cart-row {
+  display: grid;
+  grid-template-columns: 56px 1fr auto auto;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid var(--mhc-border);
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+}
+.cart-thumb {
+  width: 56px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #f5f5f7;
+}
+.cart-name {
+  font-weight: 600;
+}
+.cart-price {
+  font-size: 0.9em;
+  opacity: 0.8;
+}
+
+.cart-qty {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.cart-qty .qty-dec,
+.cart-qty .qty-inc {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  border: 1px solid var(--mhc-border);
+  background: #fafafa;
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.cart-qty .qty-dec:hover,
+.cart-qty .qty-inc:hover {
+  border-color: var(--mhc-accent);
+  box-shadow: 0 0 0 4px var(--mhc-ring);
+}
+
+.cart-del {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+#cartPanel footer {
+  border-top: 1px solid var(--mhc-border);
+  padding: 12px 16px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; /* ⇠ DODANO: gura footer na dno panela */
+}
+#cartPanel .cart-actions {
+  display: flex;
+  gap: 8px;
+} /* layout gumba bez inline-a */
+
+#cartCheckout {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: linear-gradient(180deg, #6fa3d6, var(--mhc-accent));
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+#cartCheckout:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  filter: brightness(1.03);
+}
+#cartClear {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--mhc-border);
+  background: #fafafa;
+  color: var(--mhc-ink);
+  cursor: pointer;
+}
+#cartClear:hover {
+  box-shadow: 0 0 0 4px var(--mhc-ring);
+  border-color: var(--mhc-accent);
+}

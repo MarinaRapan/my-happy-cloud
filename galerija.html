@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Unikatni nakit iz My Happy Cloud web shopa – narukvice, ogrlice, broševi, tapiserije i još mnogo toga. Ručno rađeni komadi za posebne trenutke."
+    />
+    <meta
+      name="keywords"
+      content="nakit, web shop, ogrlice, narukvice, nanognice, broševi, ručni rad, tapiserija, vuna, ukrasi za torbe, ukras za zidove, handmade, unikatni nakit My Happy Cloud"
+    />
+    <meta name="author" content="My Happy Cloud" />
+    <title>My Happy Cloud</title>
+    <link href="https://fonts.cdnfonts.com/css/moderrat" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="Slike/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="Style/galerija.css" />
+    <link rel="stylesheet" href="Style/Style.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="left-content">
+        <div class="branding">
+          <h1>My Happy Cloud Jewelry</h1>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html">Naslovna</a></li>
+            <li><a href="onama.html">O nama</a></li>
+            <li><a href="webshop.html">Web shop</a></li>
+            <li class="dropdown">
+              <a href="#">Galerija</a>
+              <div class="dropdown-content">
+                <!-- unutar .dropdown-content -->
+                <a href="galerija.html?cat=cloud">My Happy Cloud</a>
+                <a href="galerija.html?cat=heart">My Happy Heart</a>
+                <a href="galerija.html?cat=brosevi">Broševi</a>
+                <a href="galerija.html?cat=nanognice">Nanognice</a>
+                <a href="galerija.html?cat=narukvice">Narukvice</a>
+                <a href="galerija.html?cat=ogrlice">Ogrlice</a>
+                <a href="galerija.html?cat=privjesci">Privjesci</a>
+              </div>
+            </li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="#" id="openLogin">Prijava</a></li>
+            <li><a href="#" id="openRegister">Registracija</a></li>
+            <li>
+              <a href="#" id="navCart"
+                >Košarica <span id="cartBadge" class="badge">0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="right-logo">
+        <img
+          src="Slike/Orange Illustrative Knitting Logo_20250526_172050_0000.png"
+          alt="Logo"
+          class="logo"
+        />
+      </div>
+    </header>
+    <form id="search">
+      <input type="text" placeholder="Pretraži proizvode..." name="search" />
+      <button type="submit">🔍</button>
+    </form>
+    <section id="categoryHead" class="category-head" hidden>
+      <h2 id="catTitle"></h2>
+      <p id="catDesc"></p>
+    </section>
+
+    <section id="catGridWrap" class="category-wrap" hidden>
+      <div id="catGrid" class="gallery-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="collections-rail" aria-label="Kolekcije ogrlica" hidden>
+      <button class="collection-tile c-dare" data-collection="Do You Dare">
+        <strong>Do You Dare</strong><span class="count">0</span>
+      </button>
+      <button class="collection-tile c-sidi" data-collection="Aj lipo sidi">
+        <strong>Aj lipo sidi</strong><span class="count">0</span>
+      </button>
+      <button class="collection-tile c-divljakusa" data-collection="Divljakuša">
+        <strong>Divljakuša</strong><span class="count">0</span>
+      </button>
+      <button class="collection-tile c-hera" data-collection="Hera">
+        <strong>Hera</strong><span class="count">0</span>
+      </button>
+      <button class="collection-tile c-raskosna" data-collection="Raskošna">
+        <strong>Raskošna</strong><span class="count">0</span>
+      </button>
+      <button class="collection-tile c-shaiba" data-collection="Shaiba">
+        <strong>Shaiba</strong><span class="count">0</span>
+      </button>
+      <button class="collection-tile c-statement" data-collection="Statement">
+        <strong>Statement</strong><span class="count">0</span>
+      </button>
+    </section>
+
+    <section id="collectionView" class="collection-view" hidden>
+      <header class="cv-head">
+        <h3 id="collectionTitle">Kolekcija</h3>
+        <button type="button" class="cv-close" aria-label="Zatvori">×</button>
+      </header>
+      <div class="gallery-grid" id="collectionGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="necklaces" hidden>
+      <h3>Ostale ogrlice</h3>
+      <div class="gallery-grid" id="necklaceGrid" aria-live="polite"></div>
+    </section>
+    <div id="cart-modal" class="modal" hidden>
+      <div class="modal-content">
+        <button class="close-modal" aria-label="Zatvori">×</button>
+        <img id="modal-image" alt="" />
+        <div class="modal-details">
+          <p><strong>Proizvod:</strong> <span id="modal-title"></span></p>
+          <p><strong>Opis:</strong> <span id="modal-description"></span></p>
+          <p><strong>Cijena:</strong> <span id="modal-price"></span></p>
+          <p>
+            <strong>Količina:</strong>
+            <input type="number" id="modal-quantity" min="1" value="1" />
+          </p>
+        </div>
+        <button id="modal-add-to-cart" class="add-to-cart-btn">
+          Dodaj u košaricu
+        </button>
+      </div>
+    </div>
+
+    <div id="vrh">
+      <a href="galerija.html"
+        >🔝 <br />
+        Povratak Na Vrh
+      </a>
+    </div>
+    <footer>
+      <div class="div1">
+        <ul>
+          <li><a href="#">Odredbe & uvjeti</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Politika privatnosti</a></li>
+        </ul>
+      </div>
+      <div class="div2">
+        <a href="https://www.visa.com.hr/"
+          ><img
+            src="Slike/ikone/1.png"
+            alt="ikona Visa"
+            width="50px"
+            height="auto"
+        /></a>
+        <a href="https://www.mastercard.hr/hr-hr.html"
+          ><img
+            src="Slike/ikone/2.png"
+            alt="ikona mastercard"
+            width="40px"
+            height="auto"
+        /></a>
+        <a
+          href="https://www.mastercard.hr/hr-hr/privatni/pronadite-karticu.html"
+          ><img
+            src="Slike/ikone/3.png"
+            alt="ikona maestro"
+            width="40px"
+            height="auto"
+        /></a>
+      </div>
+
+      <p>
+        Copyright © 2025 by My Happy Cloud. <br />
+        All right´s reserved
+      </p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+    <script>
+      // ⬇️ Zamijeni svojim podacima iz Firebase konzole
+      const firebaseConfig = {
+        apiKey: "AIzaSyA7yi0y539YQC1s6ZVjAkDejFHdkM8zpLc",
+        authDomain: "myhappycloud-6396d.firebaseapp.com",
+        databaseURL:
+          "https://myhappycloud-6396d-default-rtdb.europe-west1.firebasedatabase.app/",
+        projectId: "myhappycloud-6396d",
+        storageBucket: "myhappycloud-6396d.appspot.com",
+        messagingSenderId: "435938126781",
+        appId: "1:435938126781:web:541d85d7bca38be72580d4",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      // “kratice” da su ti dostupne svugdje
+      window.auth = firebase.auth();
+      window.db = firebase.database();
+    </script>
+
+    <script src="Script/script.js"></script>
+    <script src="Script/galerija.js"></script>
+  </body>
+</html>

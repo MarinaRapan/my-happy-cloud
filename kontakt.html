@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kontakt My Happy Cloud – unikatni nakit iz Zadra. Adresa: Biogradska 123, 23000 Zadar. Javite nam se ili pošaljite fotografiju za personalizirani nakit."
+    />
+    <meta
+      name="keywords"
+      content="My Happy Cloud, kontakt, Zadar, nakit, personalizirani nakit, ogrlice, narukvice"
+    />
+    <meta name="author" content="My Happy Cloud" />
+    <title>Kontakt • My Happy Cloud</title>
+    <link href="https://fonts.cdnfonts.com/css/moderrat" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="Slike/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="Style/Style.css" />
+    <link rel="stylesheet" href="Style/kontakt.css" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="left-content">
+        <div class="branding">
+          <h1>My Happy Cloud Jewelry</h1>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html">Naslovna</a></li>
+            <li><a href="onama.html">O nama</a></li>
+            <li><a href="webshop.html">Web shop</a></li>
+            <li class="dropdown">
+              <a href="#">Galerija</a>
+              <div class="dropdown-content">
+                <a href="galerija.html?cat=cloud">My Happy Cloud</a>
+                <a href="galerija.html?cat=heart">My Happy Heart</a>
+                <a href="galerija.html?cat=brosevi">Broševi</a>
+                <a href="galerija.html?cat=nanognice">Nanognice</a>
+                <a href="galerija.html?cat=narukvice">Narukvice</a>
+                <a href="galerija.html?cat=ogrlice">Ogrlice</a>
+                <a href="galerija.html?cat=privjesci">Privjesci</a>
+              </div>
+            </li>
+            <li><a href="kontakt.html" aria-current="page">Kontakt</a></li>
+            <li><a href="#" id="openLogin">Prijava</a></li>
+            <li><a href="#" id="openRegister">Registracija</a></li>
+            <li>
+              <a href="#" id="navCart"
+                >Košarica <span id="cartBadge" class="badge">0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="right-logo">
+        <img
+          src="Slike/Orange Illustrative Knitting Logo_20250526_172050_0000.png"
+          alt="Logo"
+          class="logo"
+        />
+      </div>
+    </header>
+
+    <form id="search">
+      <input type="text" placeholder="Pretraži proizvode..." name="search" />
+      <button type="submit">🔍</button>
+    </form>
+
+    <main>
+      <section class="kontakt-hero" aria-label="Kontakt My Happy Cloud u Zadru">
+        <div class="hero-media">
+          <img src="Slike/Iva2.png" alt="Happy Iva - autor" loading="lazy" />
+        </div>
+        <div class="hero-text">
+          <h2>Kontakt • Zadar</h2>
+          <p>
+            ✨Javite se za narudžbe, pitanja i personalizacije. Volimo čuti vaše
+            ideje! ✨
+          </p>
+        </div>
+      </section>
+      <section class="contact-grid">
+        <div class="contact-wrap">
+          <!-- Lijevo: Info + forma (BEZ photo-frame) -->
+          <div
+            class="cardish info"
+            itemscope
+            itemtype="https://schema.org/LocalBusiness"
+          >
+            <meta itemprop="name" content="My Happy Cloud" />
+            <h3>Podaci</h3>
+            <p>
+              <strong>Grad:</strong>
+              <span itemprop="addressLocality">Zadar</span>
+            </p>
+            <p>
+              <strong>Adresa:</strong>
+              <span itemprop="streetAddress">Biogradska 123</span>,
+              <span itemprop="postalCode">23000</span>
+              <span itemprop="addressRegion">Zadar</span>
+            </p>
+            <p>
+              <strong>E-pošta:</strong>
+              <a href="mailto:myhappycloud@gmail.com" itemprop="email"
+                >myhappycloud@gmail.com</a
+              >
+            </p>
+            <div class="socials" aria-label="Društvene mreže">
+              <a
+                href="https://www.instagram.com/my_happy_cloud_/"
+                target="_blank"
+                rel="noopener"
+                >📷 Instagram</a
+              >
+              <a
+                href="https://www.facebook.com/profile.php?id=100067241559165"
+                target="_blank"
+                rel="noopener"
+                >📘 Facebook</a
+              >
+            </div>
+            <hr />
+            <h3>Pošalji poruku</h3>
+            <form
+              class="contact-form"
+              action="mailto:myhappycloud@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <div class="row">
+                <div>
+                  <label for="ime">Ime i prezime</label>
+                  <input
+                    type="text"
+                    id="ime"
+                    name="Ime i prezime"
+                    placeholder="Vaše ime"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="mail">Email</label>
+                  <input
+                    type="email"
+                    id="mail"
+                    name="Email"
+                    placeholder="ime@domena.hr"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="row">
+                <div>
+                  <label for="tema">Tema</label>
+                  <input
+                    type="text"
+                    id="tema"
+                    name="Tema"
+                    placeholder="Upit, narudžba, suradnja…"
+                  />
+                </div>
+                <div>
+                  <label for="foto">Fotografija (opcionalno)</label>
+                  <input
+                    type="file"
+                    id="foto"
+                    name="Fotografija"
+                    accept="image/*"
+                  />
+                  <p class="hint">
+                    Dodajte fotku outfita ili ideju za personalizaciju.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <label for="poruka">Poruka</label>
+                <textarea
+                  id="poruka"
+                  name="Poruka"
+                  placeholder="Recite nam sve detalje…"
+                  required
+                ></textarea>
+              </div>
+              <div class="submit-row">
+                <button type="submit">Pošalji</button>
+                <span class="hint">Ključna riječ: Zadar 💛</span>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Mapa – skraćena visina -->
+        <div class="cardish map">
+          <h3>Gdje smo – Biogradska 123, Zadar</h3>
+          <iframe
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+            src="https://www.google.com/maps?q=Biogradska%20123,%2023000%20Zadar&output=embed"
+          >
+          </iframe>
+        </div>
+      </section>
+
+      <!-- (po potrebi) dodaj defer skriptu ako već nije uključeno -->
+      <script src="Script/galerija.js" defer></script>
+    </main>
+
+    <div id="vrh">
+      <a href="kontakt.html"
+        >🔝 <br />
+        Povratak Na Vrh</a
+      >
+    </div>
+
+    <footer>
+      <div class="div1">
+        <ul>
+          <li><a href="#">Odredbe &amp; uvjeti</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Politika privatnosti</a></li>
+        </ul>
+      </div>
+      <div class="div2">
+        <a href="https://www.visa.com.hr/"
+          ><img
+            src="Slike/ikone/1.png"
+            alt="ikona Visa"
+            width="50"
+            height="auto"
+        /></a>
+        <a href="https://www.mastercard.hr/hr-hr.html"
+          ><img
+            src="Slike/ikone/2.png"
+            alt="ikona Mastercard"
+            width="40"
+            height="auto"
+        /></a>
+        <a
+          href="https://www.mastercard.hr/hr-hr/privatni/pronadite-karticu.html"
+          ><img
+            src="Slike/ikone/3.png"
+            alt="ikona Maestro"
+            width="40"
+            height="auto"
+        /></a>
+      </div>
+      <p>Copyright © 2025 by My Happy Cloud.<br />All right´s reserved</p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+    <script>
+      // ⬇️ Zamijeni svojim podacima iz Firebase konzole
+      const firebaseConfig = {
+        apiKey: "AIzaSyA7yi0y539YQC1s6ZVjAkDejFHdkM8zpLc",
+        authDomain: "myhappycloud-6396d.firebaseapp.com",
+        databaseURL:
+          "https://myhappycloud-6396d-default-rtdb.europe-west1.firebasedatabase.app/",
+        projectId: "myhappycloud-6396d",
+        storageBucket: "myhappycloud-6396d.appspot.com",
+        messagingSenderId: "435938126781",
+        appId: "1:435938126781:web:541d85d7bca38be72580d4",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      // “kratice” da su ti dostupne svugdje
+      window.auth = firebase.auth();
+      window.db = firebase.database();
+    </script>
+
+    <script src="Script/script.js"></script>
+    <script src="Script/kontakt.js"></script>
+  </body>
+</html>

@@ -1,0 +1,123 @@
+main {
+  display: block;
+}
+.about-hero {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  padding: clamp(16px, 3vw, 28px);
+  background: radial-gradient(
+      1200px 200px at -10% -10%,
+      rgba(240, 192, 0, 0.15),
+      transparent 60%
+    ),
+    radial-gradient(
+      1200px 200px at 110% 110%,
+      rgba(91, 61, 80, 0.12),
+      transparent 60%
+    ),
+    #fff;
+  margin: 10px 0 14px;
+}
+@media (max-width: 900px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+}
+.about-hero h2 {
+  font-size: clamp(26px, 3.2vw, 40px);
+  margin: 0 0 10px;
+  color: #333;
+  text-shadow: 4px 4px 8px rgb(42, 23, 139);
+}
+.lead {
+  font-size: clamp(18px, 2.2vw, 20px);
+  opacity: 0.95;
+}
+.about-photo {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  transform: rotate(-1deg);
+  animation: wiggle 7s ease-in-out infinite;
+  box-shadow: 0 14px 24px rgba(0, 0, 0, 0.08);
+}
+.about-photo img {
+  width: 400px;
+  height: auto;
+  display: block;
+}
+@keyframes wiggle {
+  0%,
+  100% {
+    transform: rotate(-1deg) translateY(0);
+  }
+  50% {
+    transform: rotate(1deg) translateY(-4px);
+  }
+}
+
+.values {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 12px 0;
+}
+@media (max-width: 860px) {
+  .values {
+    grid-template-columns: 1fr;
+  }
+}
+.vcard {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+.vcard h4 {
+  margin: 0 0 6px;
+}
+.vcard p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+.story {
+  background: #faf9f8;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  padding: 16px;
+}
+.story h3 {
+  margin-top: 0;
+}
+.story p {
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.cta {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 8px;
+}
+.cta a {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 4px 4px 8px rgb(42, 23, 139);
+
+  padding: 10px 14px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+.cta a:hover {
+  background: #fff;
+  color: #333;
+  box-shadow: 4px 4px 8px rgb(42, 23, 139);
+}

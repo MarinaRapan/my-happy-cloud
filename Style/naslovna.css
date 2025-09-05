@@ -1,0 +1,541 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+  margin: 5px;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* Da logo može ispuniti punu visinu */
+  background-color: #e3e3e3;
+  border: solid 4px rgb(91, 61, 80);
+  padding: 0;
+  height: 220px; /* Možeš prilagoditi visinu po potrebi */
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 83%;
+  padding-left: 30px;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  height: 50%;
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  text-shadow: 3px 3px rgba(143, 143, 138, 0.8);
+  font-family: "Lato", sans-serif;
+  font-weight: bold;
+  font-size: 60px;
+  margin: 0;
+}
+
+.nav-list {
+  display: flex;
+  list-style-type: none;
+  border-top: 2px solid rgb(54, 45, 54);
+  padding-top: 10px;
+  margin: 0;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.nav-list li {
+  background-color: rgb(54, 45, 54);
+  padding: 10px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.nav-list li a {
+  color: #e3e3e3;
+  text-decoration: none;
+  font-family: "moderrat", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-list li:hover {
+  background-color: rgb(75, 65, 75);
+}
+
+.nav-list li a:hover {
+  color: rgb(143, 143, 138);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(75, 65, 75);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 200px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: rgb(54, 45, 54);
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: rgb(196, 200, 207);
+  color: aliceblue;
+  text-decoration: underline;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* Modalni prozor (nevidljiv dok se ne otvori) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Sadržaj modala */
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Gumb za zatvaranje */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* LOGO */
+.right-logo {
+  width: 17%;
+  display: flex;
+  align-items: stretch;
+}
+
+.logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main {
+  display: flex;
+}
+section {
+  background-color: #ffffff;
+}
+.nd-header {
+  padding: 20px;
+  background-color: rgb(241, 241, 236);
+  position: relative;
+}
+
+.header-title {
+  text-align: right;
+  text-shadow: 2px 2px rgb(91, 61, 80);
+  margin: 0 320px 20px auto;
+  font-size: 34px;
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.text-section {
+  flex: 1;
+  font-family: "Lato", sans-serif;
+  font-size: 23px;
+  color: #444;
+  text-align: center;
+}
+
+.image1 {
+  width: 30%;
+  border-radius: 10px;
+}
+.rd-header {
+  padding: 5px;
+  background-color: rgb(241, 241, 236);
+  position: relative;
+}
+
+.rd-header-title {
+  text-align: left;
+  text-shadow: 2px 2px rgba(94, 80, 170, 0.8);
+  background-color: white;
+  font-size: 34px;
+  font-family: "Lato", sans-serif;
+  color: black;
+}
+
+.piano-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px; /* više prostora ako treba */
+}
+
+.text-piano-container {
+  flex: 1;
+  max-width: 70%; /* ograničava širinu teksta */
+  margin-top: 70px;
+}
+
+.piano {
+  width: 20%;
+  min-width: 150px;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 70px;
+}
+
+.text-piano {
+  display: inline;
+  background-color: white;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 16px;
+  text-underline-offset: 5px;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  line-height: 44px;
+  color: #272727;
+}
+.th-header {
+  padding: 20px;
+  background-color: rgb(241, 241, 236);
+  position: relative;
+}
+
+.iva-title {
+  text-align: center;
+  text-shadow: 2px 2px rgb(91, 61, 80);
+  margin: 0 auto 20px;
+  font-size: 34px;
+  font-family: "Lato", sans-serif;
+  color: #333;
+}
+
+.iva-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.text-Iva {
+  flex: 1;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  color: #444;
+  text-align: center;
+  line-height: 43px;
+  padding: 20px;
+}
+.text-Iva a {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+
+.image-iva {
+  width: 30%;
+  border-radius: 10px;
+}
+article {
+  background-color: #e3e3e3;
+}
+article h3 {
+  font-size: 25px;
+  padding-top: 35px;
+}
+.novosti {
+  text-align: center;
+  color: #272727;
+  background-color: rgb(233, 153, 203);
+}
+.video-blok p {
+  text-align: left;
+  font-size: 21px;
+  line-height: 1.2;
+  padding-left: 50px;
+}
+.naslov-forum,
+.rimski-forum {
+  text-decoration: wavy;
+  text-align: center;
+}
+.mp4-forum video {
+  width: 340px;
+  float: right;
+  border: solid 4px rgb(75, 65, 75);
+  background-color: #ffffff;
+  margin: 10px;
+  margin-right: 100px;
+  padding: 5px;
+}
+
+footer {
+  display: block;
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: rgb(54, 45, 54);
+  border: solid 4px rgb(91, 61, 80);
+}
+footer > div ul {
+  display: inline-block;
+}
+footer > div ul li {
+  list-style: none;
+}
+footer > div ul li a {
+  color: #e3e3e3;
+  text-decoration: none;
+}
+footer p {
+  color: #e3e3e3;
+}
+/* ===============================
+   ≤ 750px — traženi rasporedi
+   =============================== */
+@media (max-width: 750px) {
+  /* ND-HEADER: slika + H2 u istom redu; tekst ispod centriran */
+  .nd-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "img title"
+      "text text";
+    align-items: center;
+    gap: 16px;
+  }
+  .nd-header .header-title {
+    grid-area: title;
+    margin: 0;
+    text-align: left;
+  }
+  .nd-header .content-wrapper {
+    display: contents;
+  } /* pusti djecu u grid */
+  .nd-header .image1 {
+    grid-area: img;
+    width: min(42vw, 260px);
+    justify-self: start;
+  }
+  .nd-header .text-section {
+    grid-area: text;
+    text-align: center;
+  }
+
+  /* RD-HEADER: naslov centar; tekst lijevo; slika desno (centar po visini) */
+  .rd-header-title {
+    text-align: center;
+    margin: 0 0 8px;
+  }
+  .piano-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 16px;
+  }
+  .text-piano-container {
+    max-width: none;
+    margin-top: 0;
+  }
+  .text-piano {
+    display: block;
+    text-align: left;
+  }
+  .piano {
+    width: min(35vw, 220px);
+    min-width: 140px;
+    margin: 0;
+    justify-self: end;
+  }
+
+  /* TH-HEADER: naslov u sredini; slika lijevo; tekst desno */
+  .th-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+      "img title"
+      "text text";
+    align-items: center;
+    gap: 12px 16px;
+  }
+
+  /* “Promoviraj” djecu .iva-wrapper u grid bez mijenjanja HTML-a */
+  .th-header .iva-wrapper {
+    display: contents;
+  }
+
+  /* Veća slika lijevo */
+  .th-header .image-iva {
+    grid-area: img;
+    width: clamp(200px, 40vw, 320px); /* malo veća, ali s gornjom granom */
+    height: auto;
+    justify-self: start;
+  }
+
+  /* Naslov desno od slike, neka se normalno prelama u novi red */
+  .th-header .iva-title {
+    grid-area: title;
+    margin: 0;
+    text-align: center;
+    white-space: normal; /* dozvoli prelamanje */
+    overflow-wrap: anywhere; /* prelom i unutar dugačkih riječi, ako treba */
+  }
+
+  /* Tekst ispod, cijelom širinom */
+  .th-header .text-Iva {
+    grid-area: text;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* NOVOSTI: h2 centriran na vrhu (već jest); samo sigurni razmaci */
+  .novosti {
+    text-align: center;
+    margin: 0;
+  }
+  /* NOVOSTI — H2 u svom redu i centriran (čisti float videa ispod) */
+  article > h2.novosti {
+    text-align: center;
+    display: flow-root; /* sprječava da se float (video) podigne uz naslov */
+    margin: 0 0 12px;
+  }
+
+  /* hr odmah ispod naslova mora “očistiti” float videa */
+  article > h2.novosti + hr {
+    clear: both;
+  }
+}
+
+/* ===============================
+   ≤ 560px — dodatna kompaktnost
+   =============================== */
+@media (max-width: 560px) {
+  /* ND-HEADER: kompaktnije */
+  .nd-header {
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+  }
+  .nd-header .image1 {
+    width: min(44vw, 220px);
+  }
+  .nd-header .header-title {
+    font-size: clamp(22px, 5.2vw, 28px);
+    text-align: left;
+  }
+  .nd-header .text-section {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  /* RD-HEADER: naslov 100% širine iznad; ispod tekst | slika */
+  .piano-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "title title"
+      "text  image";
+    align-items: center;
+    column-gap: 12px;
+    row-gap: 8px;
+  }
+  .text-piano-container {
+    display: contents;
+  }
+  .rd-header-title {
+    grid-area: title;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0 0 8px;
+    font-size: clamp(22px, 5.2vw, 28px);
+  }
+  .text-piano {
+    grid-area: text;
+    display: block;
+    text-align: left;
+  }
+  .piano {
+    grid-area: image;
+    justify-self: end;
+    align-self: center;
+    width: min(42vw, 200px);
+    margin: 0;
+  }
+
+  /* TH-HEADER: nasljeđuje grid iz ≤750px; ovdje samo finiji font/gabariti */
+  .th-header .image-iva {
+    width: min(40vw, 200px);
+    justify-self: start;
+  }
+  .th-header .iva-title {
+    text-align: center;
+    margin: 0;
+    font-size: clamp(22px, 5.2vw, 28px);
+  }
+  .th-header .text-Iva {
+    grid-area: text;
+    text-align: center;
+    padding: 0;
+  }
+
+  /* NOVOSTI: naslov centriran, video 100% */
+  .novosti {
+    display: block;
+    width: 100%;
+    text-align: center;
+    clear: both;
+  }
+  .mp4-forum video {
+    width: 100% !important;
+    float: none;
+    margin: 10px auto;
+    display: block;
+  }
+  .naslov-forum {
+    text-align: center;
+    margin: 8px 0;
+  }
+  .video-blok p {
+    padding-left: 0;
+  }
+}

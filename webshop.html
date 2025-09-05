@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Unikatni nakit iz My Happy Cloud web shopa – narukvice, ogrlice, broševi, tapiserije i još mnogo toga. Ručno rađeni komadi za posebne trenutke."
+    />
+    <meta
+      name="keywords"
+      content="nakit, web shop, ogrlice, narukvice, nanognice, broševi, ručni rad, tapiserija, vuna, ukrasi za torbe, ukras za zidove, handmade, unikatni nakit My Happy Cloud"
+    />
+    <meta name="author" content="My Happy Cloud" />
+    <title>My Happy Cloud</title>
+    <link href="https://fonts.cdnfonts.com/css/moderrat" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="Style/Style.css" />
+    <link rel="stylesheet" href="Style/webshop.css" />
+    <link rel="shortcut icon" href="Slike/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="left-content">
+        <div class="branding">
+          <h1>My Happy Cloud Jewelry</h1>
+        </div>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="index.html">Naslovna</a></li>
+            <li><a href="onama.html">O nama</a></li>
+            <li><a href="webshop.html">Web shop</a></li>
+            <li class="dropdown">
+              <a href="#">Galerija</a>
+              <div class="dropdown-content">
+                <a href="galerija.html?cat=cloud">My Happy Cloud</a>
+                <a href="galerija.html?cat=heart">My Happy Heart</a>
+                <a href="galerija.html?cat=brosevi">Broševi</a>
+                <a href="galerija.html?cat=nanognice">Nanognice</a>
+                <a href="galerija.html?cat=narukvice">Narukvice</a>
+                <a href="galerija.html?cat=ogrlice">Ogrlice</a>
+                <a href="galerija.html?cat=privjesci">Privjesci</a>
+              </div>
+            </li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="#" id="openLogin">Prijava</a></li>
+            <li><a href="#" id="openRegister">Registracija</a></li>
+            <li>
+              <a href="#" id="navCart"
+                >Košarica <span id="cartBadge" class="badge">0</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="right-logo">
+        <img
+          src="Slike/Orange Illustrative Knitting Logo_20250526_172050_0000.png"
+          alt="Logo"
+          class="logo"
+        />
+      </div>
+    </header>
+    <form id="search">
+      <input type="text" placeholder="Pretraži proizvode..." name="search" />
+      <button type="submit">🔍</button>
+    </form>
+    <main class="main-content">
+      <h2>My Happy Web Shop</h2>
+      <div class="filters">
+        <button data-filter="cloud">My Happy Cloud</button>
+        <button data-filter="heart">My Happy Heart</button>
+        <button data-filter="letters">My Happy Letters</button>
+        <button data-filter="ogrlice">Ogrlice</button>
+        <button data-filter="narukvice">Narukvice</button>
+        <button data-filter="nanognice">Nanognice</button>
+        <button data-filter="brosevi">Broševi</button>
+        <button data-filter="mixAndMatch">Mix & Match</button>
+        <button data-filter="all">Svi</button>
+      </div>
+      <section class="card-grid">
+        <article class="card" data-category="cloud">
+          <h4>My Happy Cloud</h4>
+          <p>
+            Tapiserija - za uređenje Vaših dnevnih i spavaćih soba, balkona,
+            predsoblja, kuhinja..
+          </p>
+          <div class="tags">
+            <span data-image="Slike/Myhappycloud/Dream.png">Dream</span>
+            <a class="more-btn" data-product="cloud1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Myhappycloud/Rain.png">Rain</span>
+            <a class="more-btn" data-product="cloud2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Myhappycloud/Sea.png">Sea</span>
+            <a class="more-btn" data-product="cloud3" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Myhappycloud/Storm.png">Storm</span>
+            <a class="more-btn" data-product="cloud4" href="#"
+              >Dodaj u košaricu</a
+            >
+          </div>
+        </article>
+        <article class="card" data-category="heart">
+          <h4>My Happy Heart</h4>
+          <p>
+            Broš, dostupan i kao ukras za bor u Božicno vrijeme - Kreirani da
+            podignu vaše modne kombinacije
+          </p>
+          <div class="tags">
+            <span data-image="Slike/Myhappyheart/heart1.png">Sivo srce</span>
+            <a class="more-btn" data-product="heart1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Myhappyheart/heart2.png">Big Ciklama</span>
+            <a class="more-btn" data-product="heart2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Myhappyheart/heart3.png">Roza</span>
+            <a class="more-btn" data-product="heart3" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Myhappyheart/heart4.png">Hearts 2in1</span>
+            <a class="more-btn" data-product="heart4" href="#"
+              >Dodaj u košaricu</a
+            >
+          </div>
+        </article>
+        <article class="card" data-category="letters">
+          <h4>My Happy Letters</h4>
+          <p>
+            Vunena Pisana slova - po narudžbi - za uređenje Vaših dnevnih i
+            spavaćih soba, balkona, predsoblja, kuhinja..
+          </p>
+          <div class="tags">
+            <span data-image="Slike/Myhappyletters/Paula.png">Paula</span>
+            <a class="more-btn" data-product="letters1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Myhappyletters/Rowfood.png">Row food</span>
+            <a class="more-btn" data-product="letters2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Myhappyletters/Ljubav.png">Ljubav</span>
+            <a class="more-btn" data-product="letters3" href="#"
+              >Dodaj u košaricu</a
+            >
+          </div>
+        </article>
+        <article class="card" data-category="ogrlice">
+          <h4>My Happy Ogrlice</h4>
+          <p>
+            Ogrlice, hand made, svaka kao unikatno komad, moguće narudžbe u
+            kojoj Vi birate boje i raspored 😍
+          </p>
+          <div class="tags">
+            <span data-image="Slike/Ogrlice/AjLipoSidi1.png"
+              >Aj lipo sidi 1</span
+            >
+            <a class="more-btn" data-product="sidi1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/AjLipoSidi2.png"
+              >Aj lipo sidi 2</span
+            >
+            <a class="more-btn" data-product="sidi2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/AjLipoSidi3.png"
+              >Aj lipo sidi 3</span
+            >
+            <a class="more-btn" data-product="sidi3" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/AjLipoSidi4.png"
+              >Aj lipo sidi 4</span
+            >
+            <a class="more-btn" data-product="sidi4" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/AnticGreeceInspo.png"
+              >Antic Greece inspo</span
+            >
+            <a class="more-btn" data-product="anticGreeceInspo4" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Diva.png">Diva</span>
+            <a class="more-btn" data-product="diva" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Divljakusha1.png"
+              >Divljakuša 1</span
+            >
+            <a class="more-btn" data-product="divljakusha1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Divljakusha2.png"
+              >Divljakuša 2</span
+            >
+            <a class="more-btn" data-product="divljakusha2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Divljakusha3.png"
+              >Divljakuša 3</span
+            >
+            <a class="more-btn" data-product="divljakusha3" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Divljakusha4.png"
+              >Divljakuša 4</span
+            >
+            <a class="more-btn" data-product="divljakusha4" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Divljakusha5.png"
+              >Divljakuša 5</span
+            >
+            <a class="more-btn" data-product="divljakusha5" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Divljakusha6.png"
+              >Divljakuša 6</span
+            >
+            <a class="more-btn" data-product="divljakusha6" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Divljakusha7.png"
+              >Divljakuša 7</span
+            >
+            <a class="more-btn" data-product="divljakusha7" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Divljakusha8.png"
+              >Divljakuša 8</span
+            >
+            <a class="more-btn" data-product="divljakusha8" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare1.png">Do You Dare 1</span>
+            <a class="more-btn" data-product="doYouDare1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare2.png">Do You Dare 2</span>
+            <a class="more-btn" data-product="doYouDare2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare4.png">Do You Dare 4</span>
+            <a class="more-btn" data-product="doYouDare4" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare5.png">Do You Dare 5</span>
+            <a class="more-btn" data-product="doYouDare5" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare6.png">Do You Dare 6</span>
+            <a class="more-btn" data-product="doYouDare6" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare7.png">Do You Dare 7</span>
+            <a class="more-btn" data-product="doYouDare7" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare8.png">Do You Dare 8</span>
+            <a class="more-btn" data-product="doYouDare8" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare9.png">Do You Dare 9</span>
+            <a class="more-btn" data-product="doYouDare9" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare10.png"
+              >Do You Dare 10</span
+            >
+            <a class="more-btn" data-product="doYouDare10" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare11.png"
+              >Do You Dare 11</span
+            >
+            <a class="more-btn" data-product="doYouDare11" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare12.png"
+              >Do You Dare 12</span
+            >
+            <a class="more-btn" data-product="doYouDare12" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare13.png"
+              >Do You Dare 13</span
+            >
+            <a class="more-btn" data-product="doYouDare13" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare14.png"
+              >Do You Dare 14</span
+            >
+            <a class="more-btn" data-product="doYouDare14" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare15.png"
+              >Do You Dare 15</span
+            >
+            <a class="more-btn" data-product="doYouDare15" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDare16.png"
+              >Do You Dare 16</span
+            >
+            <a class="more-btn" data-product="doYouDare16" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDareArtistic.png"
+              >Do You Dare Artistic</span
+            >
+            <a class="more-btn" data-product="doYouDareArtistic" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDareBackTo80s.png"
+              >DO YOU DARE back to 80´s</span
+            >
+            <a class="more-btn" data-product="backTo80" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDareInZagreb.png"
+              >Do You Dare in Zagreb</span
+            >
+            <a class="more-btn" data-product="doYouDareInZagreb" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/DoYouDareYellowWool.png"
+              >Do You Dare Yellow wool</span
+            >
+            <a class="more-btn" data-product="doYouDareInYellow" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Guma.png">Guma</span>
+            <a class="more-btn" data-product="guma" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Hera1.png">Hera 1</span>
+            <a class="more-btn" data-product="hera1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Hera2.png">Hera 2</span>
+            <a class="more-btn" data-product="hera2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Lady.png">Lady</span>
+            <a class="more-btn" data-product="lady" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/LostInSpace.png"
+              >Lost in space</span
+            >
+            <a class="more-btn" data-product="lostinspace" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/LoveIsAllAround.png"
+              >Love is all around</span
+            >
+            <a class="more-btn" data-product="loveIsAllAround" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/MatiDalmacija.png"
+              >Mati Dalmacija</span
+            >
+            <a class="more-btn" data-product="matiDalmacija" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/MyHappyHeartNecklace.png"
+              >My happy heart Necklace</span
+            >
+            <a class="more-btn" data-product="myHappyHeartNecklace" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/nestasna.png">Nestašna</span>
+            <a class="more-btn" data-product="nestasna" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/ogrlicaOdijelo.png"
+              >Ogrlica za odijelo</span
+            >
+            <a class="more-btn" data-product="ogrlicaOdijelo" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Pletivo.png"
+              >Ogrlica od Pletiva</span
+            >
+            <a class="more-btn" data-product="pletivo" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Raskoshna1.png">Raskošna 1</span>
+            <a class="more-btn" data-product="raskoshna1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Raskoshna2.png">Raskošna 2</span>
+            <a class="more-btn" data-product="raskoshna2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Royal.png">Royal</span>
+            <a class="more-btn" data-product="royal" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/SamoTiSeCiniDaSamTvoja.png"
+              >Samo ti se cini da sam tvoja</span
+            >
+            <a class="more-btn" data-product="samoTiSeCiniDaSTvoja" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/SHAIBA1.png">SHAIBA 1</span>
+            <a class="more-btn" data-product="shaiba1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/SHAIBA2.png">SHAIBA 2</span>
+            <a class="more-btn" data-product="shaiba2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/SHAIBA3.png">SHAIBA 3</span>
+            <a class="more-btn" data-product="shaiba3" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/SHAIBA3u1.png">SHAIBA 3u1</span>
+            <a class="more-btn" data-product="shaiba4" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/SHAIBA-Sramežljiva.png"
+              >SHAIBA..Sramežljiva</span
+            >
+            <a class="more-btn" data-product="shaiba5" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Statement1.png">Statement 1</span>
+            <a class="more-btn" data-product="statement1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Statement2.png">Statement 2</span>
+            <a class="more-btn" data-product="statement2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Statement3.png">Statement 3</span>
+            <a class="more-btn" data-product="statement3" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/Strong.png">Strong</span>
+            <a class="more-btn" data-product="strong" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/TokioDrift.png">Tokio Drift</span>
+            <a class="more-btn" data-product="tokioDrift" href="#"
+              >Dodaj u košaricu</a
+            >
+          </div>
+        </article>
+        <article class="card" data-category="narukvice">
+          <h4>My Happy Narukvice</h4>
+          <p>Narukvice - isto moguće po narudžbi, kao i mix &amp; match</p>
+          <div class="tags">
+            <span data-image="Slike/narukvice/AjlipoSidi.png"
+              >Aj lipo sidi</span
+            >
+            <a class="more-btn" data-product="ajLipoSidi" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/BarbieXenaWarriorPrincess.png"
+              >Barbie Xena Warrior Princess</span
+            >
+            <a
+              class="more-btn"
+              data-product="barbieXenaWarriorPrincess"
+              href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/Confucius.png">Confucius</span>
+            <a class="more-btn" data-product="confucius" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/CustomMade.png">Custom made</span>
+            <a class="more-btn" data-product="customMade" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/Dalmatinka.png">Dalmatinka</span>
+            <a class="more-btn" data-product="dalmatinka" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/Lava.png">Lava Queen</span>
+            <a class="more-btn" data-product="lavaQueen" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/London-lavaStone.png"
+              >London - lava stone</span
+            >
+            <a class="more-btn" data-product="london-lava-stone" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/LookingForTheSummer.png"
+              >Looking for the summer</span
+            >
+            <a class="more-btn" data-product="lookingForTheSummer" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/muskaNarukvica.png"
+              >Muska narukvica</span
+            >
+            <a class="more-btn" data-product="muskaNarukvica" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/Nedostupna.png">Nedostupna</span>
+            <a class="more-btn" data-product="nedostupna" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/Rope.png">Rope</span>
+            <a class="more-btn" data-product="rope" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/SHAIBA1.png"> Shaiba1</span>
+            <a class="more-btn" data-product="shaiba1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Ogrlice/SHAIBA2.png">Shaiba2</span>
+            <a class="more-btn" data-product="shaiba2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/Sidra.png">Sidra</span>
+            <a class="more-btn" data-product="sidra" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/Sidro.png">Sidro</span>
+            <a class="more-btn" data-product="sidro" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/Simple.png">Simple</span>
+            <a class="more-btn" data-product="simple" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/Simplicity.png">Simplicity</span>
+            <a class="more-btn" data-product="simplicity" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/SummerColors.png"
+              >Summer colors</span
+            >
+            <a class="more-btn" data-product="summerColors" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/Unisex.png">SidraUnisex</span>
+            <a class="more-btn" data-product="unisex" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/UrbanXenaWarriorPrincess.png"
+              >Urban Xena Warrior Princess</span
+            >
+            <a class="more-btn" data-product="urbanXenaWarriorPrincess" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/VrtniPrkos.png">Vrtni prkos</span>
+            <a class="more-btn" data-product="vrtniPrkos" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Narukvice/UrbanXenaWarrior.png"
+              >Urban Xena Warrior</span
+            >
+            <a class="more-btn" data-product="urbanXenaWarrior" href="#"
+              >Dodaj u košaricu</a
+            >
+          </div>
+        </article>
+        <article class="card" data-category="nanognice">
+          <h4>My Happy Nanognice</h4>
+          <p>
+            Nanognice - da ukrasite i svoj gležanj, da koračate sa stavom i
+            stilom
+          </p>
+          <div class="tags">
+            <span data-image="Slike/Nanognice/Nanognica1.png">Nanognica1</span>
+            <a class="more-btn" data-product="nanognica1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Nanognice/Nanognica2.png">Nanognica2</span>
+            <a class="more-btn" data-product="nanognica2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Nanognice/Nanognica3.png">Nanognica3</span>
+            <a class="more-btn" data-product="nanognica3" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Nanognice/Nostalgija.png">Nostalgija</span>
+            <a class="more-btn" data-product="nanognica4" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Nanognice/Nude.png">Nude</span>
+            <a class="more-btn" data-product="nanognica5" href="#"
+              >Dodaj u košaricu</a
+            >
+          </div>
+        </article>
+        <article class="card" data-category="brosevi">
+          <h4>My Happy Broševi</h4>
+          <p>
+            Broševi - Za vezivanje marama, salova, za ukrašavanje sakoa,
+            kaputa... Da više nikada ništa ne bude dosadno..
+          </p>
+          <div class="tags">
+            <span data-image="Slike/Brosevi/AdventskiBrosh.png"
+              >Adventski brosh</span
+            >
+            <a class="more-btn" data-product="brosh1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/Brosh2in1.png">Brosh 2in1</span>
+            <a class="more-btn" data-product="brosh2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/oblak1.png">Oblak 1</span>
+            <a class="more-btn" data-product="oblak1" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/oblak2.png">Oblak 2</span>
+            <a class="more-btn" data-product="oblak2" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/oblak3.png">Oblak 3</span>
+            <a class="more-btn" data-product="oblak3" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/oblak4.png">Oblak 4 - 3u1</span>
+            <a class="more-btn" data-product="oblak4" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/BroshSvitanje.png"
+              >Brosh Svitanje</span
+            >
+            <a class="more-btn" data-product="brosh4" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/Brosh-Artistic.png"
+              >Brosh Artistic</span
+            >
+            <a class="more-btn" data-product="brosh5" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/ElegantBrosh.png"
+              >Elegant Brosh</span
+            >
+            <a class="more-btn" data-product="brosh6" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/ElegantCloud.png"
+              >Elegant Cloud</span
+            >
+            <a class="more-btn" data-product="brosh7" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/HappyBros.png">Happy bros</span>
+            <a class="more-btn" data-product="brosh8" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/NewAge.png">New age Brosh</span>
+            <a class="more-btn" data-product="brosh10" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/PleteniBrosh-3u1.png"
+              >Pleteni Brosevi - 3u1</span
+            >
+            <a class="more-btn" data-product="brosh11" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/Brosevi/SigurecaALABABA.png"
+              >Šigureca A LA BABA</span
+            >
+            <a class="more-btn" data-product="brosh13" href="#"
+              >Dodaj u košaricu</a
+            >
+          </div>
+        </article>
+        <article class="card" data-category="mixandmatch">
+          <h4>Mix &amp; Match</h4>
+          <p>Kombinacije Ogrlica i narukvica, više je ipak više 🤭</p>
+          <div class="tags">
+            <span data-image="Slike/MixAndMatch/DubaiColl.png"
+              >Dubai coll - narukvice</span
+            >
+            <a class="more-btn" data-product="mm1" href="#">Dodaj u košaricu</a>
+            <span data-image="Slike/MixAndMatch/Game.png"
+              >Game - narukvice</span
+            >
+            <a class="more-btn" data-product="mm2" href="#">Dodaj u košaricu</a>
+            <span data-image="Slike/MixAndMatch/ColorMatch.png"
+              >ColorMatch - narukvice</span
+            >
+            <a class="more-btn" data-product="mm3" href="#">Dodaj u košaricu</a>
+            <span data-image="Slike/MixAndMatch/MatchAndEnjoy.png"
+              >Match and enjoy - ogrlice</span
+            >
+            <a class="more-btn" data-product="mm4" href="#">Dodaj u košaricu</a>
+            <span data-image="Slike/MixAndMatch/MatchIt.png"
+              >Match It - ogrlice</span
+            >
+            <a class="more-btn" data-product="mm5" href="#">Dodaj u košaricu</a>
+            <span data-image="Slike/MixAndMatch/narukviceSummer.png"
+              >Summer - narukvice</span
+            >
+            <a class="more-btn" data-product="mm6" href="#">Dodaj u košaricu</a>
+            <span data-image="Slike/MixAndMatch/SeaMatch.png">Sea match</span>
+            <a class="more-btn" data-product="mm7" href="#">Dodaj u košaricu</a>
+            <span data-image="Slike/MixAndMatch/saOkusomSoli.png"
+              >Sa okusom soli - narukvice</span
+            >
+            <a class="more-btn" data-product="mm8" href="#">Dodaj u košaricu</a>
+            <span data-image="Slike/MixAndMatch/StarIsBorn.png"
+              >Star is born - narukvice</span
+            >
+            <a class="more-btn" data-product="mm9" href="#">Dodaj u košaricu</a>
+            <span data-image="Slike/MixAndMatch/StrongMatch.png"
+              >StrongMatch - ogrlice</span
+            >
+            <a class="more-btn" data-product="mm10" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/MixAndMatch/SummerEdition1.png"
+              >Summer edition 1 - narukvice</span
+            >
+            <a class="more-btn" data-product="mm11" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/MixAndMatch/SummerEdition2.png"
+              >Summer edition 2 - narukvice</span
+            >
+            <a class="more-btn" data-product="mm12" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/MixAndMatch/SummerEdition1.png"
+              >Summer edition 3 - narukvice</span
+            >
+            <a class="more-btn" data-product="mm13" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/MixAndMatch/SummerEdition4.png"
+              >Summer edition 4 - narukvice</span
+            >
+            <a class="more-btn" data-product="mm14" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/MixAndMatch/Unisex2.png"
+              >Unisex2 - narukvice</span
+            >
+            <a class="more-btn" data-product="mm15" href="#"
+              >Dodaj u košaricu</a
+            >
+            <span data-image="Slike/MixAndMatch/VolimIPostojim.png"
+              >Volim i postojim - ogrlice</span
+            >
+            <a class="more-btn" data-product="mm16" href="#"
+              >Dodaj u košaricu</a
+            >
+          </div>
+        </article>
+      </section>
+      <div id="product-modal" class="hidden"></div>
+    </main>
+
+    <!-- Shared cart modal -->
+    <div id="cart-modal" class="modal" hidden>
+      <div class="modal-content">
+        <button class="close-modal" aria-label="Zatvori">×</button>
+        <img id="modal-image" alt="" />
+        <div class="modal-details">
+          <p><strong>Proizvod:</strong> <span id="modal-title"></span></p>
+          <p><strong>Opis:</strong> <span id="modal-description"></span></p>
+          <p><strong>Cijena:</strong> <span id="modal-price"></span></p>
+          <p>
+            <strong>Količina:</strong>
+            <input type="number" id="modal-quantity" min="1" value="1" />
+          </p>
+        </div>
+        <button id="modal-add-to-cart" class="add-to-cart-btn">
+          Dodaj u košaricu
+        </button>
+      </div>
+    </div>
+
+    <div id="vrh">
+      <a href="webshop.html"
+        >🔝 <br />
+        Povratak Na Vrh
+      </a>
+    </div>
+    <footer>
+      <div class="div1">
+        <ul>
+          <li><a href="#">Odredbe & uvjeti</a></li>
+        </ul>
+        <br />
+        <ul>
+          <li><a href="#">Politika privatnosti</a></li>
+        </ul>
+      </div>
+      <div class="div2">
+        <a href="https://www.visa.com.hr/"
+          ><img
+            src="Slike/ikone/1.png"
+            alt="ikona Visa"
+            width="50px"
+            height="auto"
+        /></a>
+        <a href="https://www.mastercard.hr/hr-hr.html"
+          ><img
+            src="Slike/ikone/2.png"
+            alt="ikona mastercard"
+            width="40px"
+            height="auto"
+        /></a>
+        <a
+          href="https://www.mastercard.hr/hr-hr/privatni/pronadite-karticu.html"
+          ><img
+            src="Slike/ikone/3.png"
+            alt="ikona maestro"
+            width="40px"
+            height="auto"
+        /></a>
+      </div>
+
+      <p>
+        Copyright © 2025 by My Happy Cloud. <br />
+        All right´s reserved
+      </p>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+    <script>
+      // ⬇️ Zamijeni svojim podacima iz Firebase konzole
+      const firebaseConfig = {
+        apiKey: "AIzaSyA7yi0y539YQC1s6ZVjAkDejFHdkM8zpLc",
+        authDomain: "myhappycloud-6396d.firebaseapp.com",
+        databaseURL:
+          "https://myhappycloud-6396d-default-rtdb.europe-west1.firebasedatabase.app/",
+        projectId: "myhappycloud-6396d",
+        storageBucket: "myhappycloud-6396d.appspot.com",
+        messagingSenderId: "435938126781",
+        appId: "1:435938126781:web:541d85d7bca38be72580d4",
+      };
+      firebase.initializeApp(firebaseConfig);
+
+      // “kratice” da su ti dostupne svugdje
+      window.auth = firebase.auth();
+      window.db = firebase.database();
+    </script>
+
+    <script src="Script/script.js"></script>
+    <!-- login/registracija modal -->
+    <script src="Script/webshop.js"></script>
+    <!-- dohvat i prikaz proizvoda -->
+  </body>
+</html>

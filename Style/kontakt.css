@@ -1,0 +1,293 @@
+/* kontakt.css — čisti, dodatni stilovi za kontakt.html */
+/* Pretpostavka: kontakt.js dodaje klasu .is-animate na .kontakt-hero kad uđe u viewport */
+
+/* HERO: layout i osnovni izgled */
+.kontakt-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+  align-items: center;
+  padding: clamp(16px, 3vw, 28px);
+  margin: 10px 0 14px;
+  border: 1px solid #ececec;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f7f3f0, #fff);
+  overflow: hidden;
+}
+@media (max-width: 900px) {
+  .kontakt-hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* HERO: početno stanje (prije .is-animate) */
+.kontakt-hero .hero-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transform: translateY(-40px);
+}
+.kontakt-hero .hero-text {
+  opacity: 0;
+  transform: translateY(-6px);
+  clip-path: inset(0 0 100% 0);
+}
+.kontakt-hero .hero-text h2 {
+  font-size: clamp(26px, 3.2vw, 40px);
+  margin: 0 0 10px;
+}
+
+/* HERO: animacija se pokreće kada JS doda .is-animate */
+.kontakt-hero.is-animate .hero-media img {
+  animation: mhcDropUp 1.1s cubic-bezier(0.22, 0.8, 0.26, 0.99) forwards;
+}
+.kontakt-hero.is-animate .hero-text {
+  animation: mhcTextReveal 0.8s ease forwards 1.1s;
+}
+
+/* Keyframes: pad pa kratki odskok gore, zatim miruje */
+@keyframes mhcDropUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(12px);
+  }
+  75% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes mhcTextReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+/* GRID: sekcija ispod hero bloka */
+.contact-grid {
+  display: grid;
+  gap: 18px;
+}
+.contact-grid .contact-wrap {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr; /* samo lijevi stupac (info + forma) */
+}
+
+/* FORMA: sitni detalji za fokus i raspored */
+.contact-grid .info .contact-form {
+  display: grid;
+  gap: 10px;
+}
+.contact-grid .info .row {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 680px) {
+  .contact-grid .info .row {
+    grid-template-columns: 1fr;
+  }
+}
+.contact-grid .info label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.contact-grid .info input[type="text"],
+.contact-grid .info input[type="email"],
+.contact-grid .info input[type="file"],
+.contact-grid .info textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font: inherit;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+.contact-grid .info textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+.contact-grid .info input:focus,
+.contact-grid .info textarea:focus {
+  outline: none;
+  border-color: #5b3d50;
+  box-shadow: 0 0 0 3px rgba(91, 61, 80, 0.12);
+}
+.contact-grid .info .hint {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+.contact-grid .info .submit-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.contact-grid .info button[type="submit"] {
+  background: #5b3d50;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.contact-grid .info button[type="submit"]:hover {
+  background: #f0c000;
+  color: #333;
+}
+
+/* Društvene mreže */
+.contact-grid .info .socials {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+.contact-grid .info .socials a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  text-decoration: none;
+  color: #5b3d50;
+}
+.contact-grid .info .socials a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Mapa — kraća visina */
+.contact-grid .map iframe {
+  width: 100%;
+  height: clamp(220px, 24vw, 300px);
+  border: 0;
+  border-radius: 12px;
+}
+
+/* Pristupačnost: smanji animacije na zahtjev */
+@media (prefers-reduced-motion: reduce) {
+  .kontakt-hero .hero-media img,
+  .kontakt-hero .hero-text {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+}
+/* ——— HERO: osnovni layout (full-bleed) ——— */
+.kontakt-hero {
+  display: block;
+  margin: 0 0 clamp(14px, 3vw, 24px);
+}
+.kontakt-hero .hero-media {
+  position: relative;
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  height: clamp(260px, 52vh, 640px);
+  overflow: hidden;
+}
+.kontakt-hero .hero-media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  will-change: transform, opacity, clip-path, height;
+}
+.kontakt-hero .hero-text {
+  padding-top: clamp(16px, 3vw, 24px);
+  transition: padding 0.3s ease;
+}
+
+/* ——— MODE 1: scroll-hide (default) ——— */
+/* Blagi ulaz na vrh + zatvaranje pri skrolu */
+.kontakt-hero[data-mode="scroll-hide"] .hero-media img {
+  transform: translateY(-6px);
+  transition: transform 0.6s cubic-bezier(0.22, 0.8, 0.26, 0.99),
+    opacity 0.4s ease;
+  opacity: 1;
+}
+.kontakt-hero[data-mode="scroll-hide"].collapsed .hero-media {
+  height: 0; /* slika se sklopi */
+  transition: height 0.6s cubic-bezier(0.22, 0.8, 0.26, 0.99);
+}
+.kontakt-hero[data-mode="scroll-hide"].collapsed .hero-media img {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.kontakt-hero[data-mode="scroll-hide"].collapsed .hero-text {
+  padding-top: 0; /* tekst dolazi na vrh stranice */
+}
+
+/* ——— MODE 2: split-reveal (zavjesa s lijeva i desna) ——— */
+.kontakt-hero[data-mode="split-reveal"] .hero-media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #fff; /* boja “zavjese”; može transparent uz blur ako želiš */
+  clip-path: inset(0 50% 0 50%);
+  animation: curtainOpen 1.2s ease forwards;
+}
+@keyframes curtainOpen {
+  0% {
+    clip-path: inset(0 50% 0 50%);
+  }
+  100% {
+    clip-path: inset(0 0% 0 0%);
+  }
+}
+
+/* ——— MODE 3: kenburns (slika ostaje, suptilan pokret) ——— */
+.kontakt-hero[data-mode="kenburns"] .hero-media img {
+  transform: scale(1.04) translateY(0);
+  animation: kb 10s ease-in-out infinite alternate;
+  opacity: 1;
+}
+@keyframes kb {
+  0% {
+    transform: scale(1.04) translateY(0);
+  }
+  100% {
+    transform: scale(1) translateY(-8px);
+  }
+}
+
+/* ——— Mapa niža ——— */
+.contact-grid .map iframe {
+  width: 100%;
+  height: clamp(220px, 24vw, 300px);
+  border: 0;
+  border-radius: 12px;
+}
+
+/* ——— Pristupačnost ——— */
+@media (prefers-reduced-motion: reduce) {
+  .kontakt-hero .hero-media,
+  .kontakt-hero .hero-media img,
+  .kontakt-hero .hero-text {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  .kontakt-hero[data-mode="scroll-hide"].collapsed .hero-media {
+    height: 0;
+  }
+  .kontakt-hero[data-mode="scroll-hide"].collapsed .hero-text {
+    padding-top: 0;
+  }
+}

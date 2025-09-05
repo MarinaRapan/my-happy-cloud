@@ -1,0 +1,51 @@
+Naziv aplikacije: Jewelify – Webshop za nakit
+
+Cilj aplikacije:
+Omogućiti korisnicima pregled i kupovinu različitih vrsta nakita (ogrlice, prstenje, naušnice itd.) uz moderan, responzivan dizajn i jednostavnu navigaciju. Administratori imaju mogućnost upravljanja ponudom, cijenama i zalihama.
+
+Tehnologije:
+Frontend: React ili obični (vanilla) javascript
+Backend: Firebase
+
+Vrste korisnika:
+1. Gost (neprijavljen korisnik)
+Može pregledavati proizvode i dodavati ih u košaricu
+Prilikom plaćanja mora se registrirati ili prijaviti
+2. Registrirani korisnik
+Može kupovati, pratiti narudžbe i spremati proizvode u wishlistu
+3. Administrator (prodavač)
+Upravljanje proizvodima (dodavanje, uređivanje, brisanje)
+Praćenje narudžbi i korisničkih podataka
+
+Funkcionalnosti aplikacije
+1. Katalog proizvoda
+Popis svih proizvoda (s filterima po vrsti, cijeni, metalu, novitetima)
+Detalji proizvoda: naziv, opis, materijal, cijena, slike, ocjene
+
+2. Pretraživanje i filtriranje
+Po nazivu, vrsti nakita, cijeni, dostupnosti, boji, materijalu (zlato, srebro…)
+
+3. Recenzije i ocjene
+Registrirani korisnici mogu ostaviti ocjenu i komentar nakon kupnje
+
+4. Wishlist (lista želja)
+Spremanje proizvoda koje korisnik želi pratiti ili kasnije kupiti
+
+5. Registracija i autentikacija (Firebase Auth)
+Email/lozinka prijava
+Google/Facebook autentikacija
+Reset lozinke, promjena profila
+
+6. Košarica i narudžbe
+Dodavanje/uklanjanje proizvoda iz košarice
+Provjera narudžbe i potvrda
+Akcije i popusti - Istaknuti proizvodi na akciji te Promjena cijena za određeni period
+
+7. Praćenje narudžbi
+Korisnik vidi povijest narudžbi i status (npr. "u obradi", "poslano")
+
+Administratorske funkcionalnosti
+Dodavanje i uređivanje proizvoda (naziv, opis, cijena, zaliha, slike)
+Upravljanje kategorijama (npr. “Naušnice” → “Zlatne”, “Srebrne”)
+Pregled i ručna obrada narudžbi
+Uvid u statistiku (najprodavaniji artikli, najaktivniji korisnici)
