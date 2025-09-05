@@ -98,16 +98,17 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   })();
 
-  // 2) URL slika
+  // 2) URL slika — RELATIVE za GitHub Pages (bez leading '/')
   const imgUrl = (src) => {
     if (!src) return "";
     let s = String(src).trim();
     s = s.replace(/\\\\/g, "/"); // backslash → slash
-    s = s.replace(/(^|[^:])\/{2,}/g, (_, a) => (a || "") + "/"); // collapse // (not after protocol)
-    if (/^(Slike|Style|Script)\//i.test(s)) {
-      s = "/" + s.replace(/^\/+/, "");
-    } // root-absolute known folders
-    if (!/^(https?:)?\/\//i.test(s) && !s.startsWith("/")) {
+    s = s.replace(/(^|[^:])\/{2,}/g, (_, a) => (a || "") + "/"); // collapse // (ne nakon protokola)
+
+    // ❌ NE radimo: if (/^(Slike|Style|Script)\//i.test(s)) s = "/" + s;
+    // ✅ Umjesto toga: prisilno relativno (./) i bez leading slasha
+    if (!/^(https?:)?\/\//i.test(s)) {
+      s = s.replace(/^\/+/, ""); // skini sve početne '/'
       if (!s.startsWith("./")) s = "./" + s;
     }
     return encodeURI(s);
