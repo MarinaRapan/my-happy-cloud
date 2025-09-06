@@ -50,62 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
       "Ne mogu učitati products.json. Pokušano:\n" + tried.join("\n")
     );
   }
-  // ==== FIX: mobile dropdown toggle (prevents '#' jump) ====
-  (function fixMobileDropdown() {
-    const dropdown = document.querySelector(".nav-list .dropdown");
-    if (!dropdown) return;
-
-    const trigger = dropdown.querySelector(':scope > a[href="#"]');
-    const menu = dropdown.querySelector(":scope > .dropdown-content");
-
-    const isTouchLike = () =>
-      window.matchMedia("(hover: none)").matches || window.innerWidth <= 760;
-
-    function open() {
-      dropdown.classList.add("open");
-      trigger?.setAttribute("aria-expanded", "true");
-    }
-    function close() {
-      dropdown.classList.remove("open");
-      trigger?.setAttribute("aria-expanded", "false");
-    }
-    function toggle(e) {
-      if (!isTouchLike()) return; // desktop ostavi na :hover
-      e.preventDefault(); // spriječi skok na vrh zbog '#'
-      e.stopPropagation();
-      dropdown.classList.toggle("open");
-      trigger?.setAttribute(
-        "aria-expanded",
-        String(dropdown.classList.contains("open"))
-      );
-    }
-
-    trigger?.setAttribute("role", "button");
-    trigger?.setAttribute("aria-haspopup", "menu");
-    trigger?.setAttribute("aria-expanded", "false");
-
-    trigger?.addEventListener("click", toggle, { passive: false });
-    trigger?.addEventListener("touchstart", toggle, { passive: false });
-
-    // zatvori kad klikneš izvan menija ili pritisneš ESC
-    document.addEventListener("click", (e) => {
-      if (!dropdown.contains(e.target)) close();
-    });
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") close();
-    });
-
-    // dopuštamo normalnu navigaciju po linkovima unutar menija
-    menu?.addEventListener(
-      "click",
-      (e) => {
-        const link = e.target.closest("a");
-        if (!link) return;
-        close(); // zatvori i pusti da ode na npr. galerija.html?cat=narukvice
-      },
-      true
-    );
-  })();
 
   // URL slika — sigurno za GH Pages (gradi iz __ASSET_BASE)
   const imgUrl = (src) => {

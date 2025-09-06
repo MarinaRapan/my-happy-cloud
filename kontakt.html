@@ -77,7 +77,11 @@
     <main>
       <section class="kontakt-hero" aria-label="Kontakt My Happy Cloud u Zadru">
         <div class="hero-media">
-          <img src="Slike/Iva2.png" alt="Happy Iva - autor" loading="lazy" />
+          <img
+            src="Slike/Aj lipo sidi 4.png"
+            alt="Happy Iva - autor"
+            loading="lazy"
+          />
         </div>
         <div class="hero-text">
           <h2>Kontakt • Zadar</h2>
@@ -118,23 +122,34 @@
                 href="https://www.instagram.com/my_happy_cloud_/"
                 target="_blank"
                 rel="noopener"
-                >📷 Instagram</a
+                class="social insta"
+                aria-label="Instagram"
               >
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+                  <path
+                    d="M7 1.5h10A5.5 5.5 0 0 1 22.5 7v10A5.5 5.5 0 0 1 17 22.5H7A5.5 5.5 0 0 1 1.5 17V7A5.5 5.5 0 0 1 7 1.5Zm5 4a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Zm0 2.6a3.9 3.9 0 1 1 0 7.8 3.9 3.9 0 0 1 0-7.8ZM18 5.9a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8Z"
+                  />
+                </svg>
+                <span>Instagram</span>
+              </a>
               <a
                 href="https://www.facebook.com/profile.php?id=100067241559165"
                 target="_blank"
                 rel="noopener"
-                >📘 Facebook</a
+                class="social fb"
+                aria-label="Facebook"
               >
+                <svg viewBox="0 0 24 24" aria-hidden="true" class="icon">
+                  <path
+                    d="M13.5 9H16l.5-3h-3V4.7c0-.9.3-1.5 1.6-1.5H16V.2C15.4.1 14.6 0 13.7 0c-2.4 0-4 1.5-4 4.2V6H7v3h2.7v9H13V9z"
+                  />
+                </svg>
+                <span>Facebook</span>
+              </a>
             </div>
             <hr />
             <h3>Pošalji poruku</h3>
-            <form
-              class="contact-form"
-              action="mailto:myhappycloud@gmail.com"
-              method="post"
-              enctype="text/plain"
-            >
+            <form class="contact-form" id="contactForm" novalidate>
               <div class="row">
                 <div>
                   <label for="ime">Ime i prezime</label>
@@ -176,7 +191,7 @@
                     accept="image/*"
                   />
                   <p class="hint">
-                    Dodajte fotku outfita ili ideju za personalizaciju.
+                    Dodajte fotografiju outfita ili ideju za personalizaciju.
                   </p>
                 </div>
               </div>
@@ -185,13 +200,14 @@
                 <textarea
                   id="poruka"
                   name="Poruka"
-                  placeholder="Recite nam sve detalje…"
+                  placeholder="Recite nam sve detalje za lakšu realizaciju Vaše ideje…"
                   required
                 ></textarea>
               </div>
               <div class="submit-row">
                 <button type="submit">Pošalji</button>
                 <span class="hint">Ključna riječ: Zadar 💛</span>
+                <p class="form-status" aria-live="polite"></p>
               </div>
             </form>
           </div>
@@ -209,9 +225,6 @@
           </iframe>
         </div>
       </section>
-
-      <!-- (po potrebi) dodaj defer skriptu ako već nije uključeno -->
-      <script src="Script/galerija.js" defer></script>
     </main>
 
     <div id="vrh">
@@ -256,29 +269,17 @@
       </div>
       <p>Copyright © 2025 by My Happy Cloud.<br />All right´s reserved</p>
     </footer>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
 
     <script>
-      // ⬇️ Zamijeni svojim podacima iz Firebase konzole
-      const firebaseConfig = {
+      // 🔧 Postavi Firebase config: zamijeni vrijednosti i ostavi ovaj blok iznad kontakt.js
+      window.__FIREBASE_CONFIG = {
         apiKey: "AIzaSyA7yi0y539YQC1s6ZVjAkDejFHdkM8zpLc",
         authDomain: "myhappycloud-6396d.firebaseapp.com",
-        databaseURL:
-          "https://myhappycloud-6396d-default-rtdb.europe-west1.firebasedatabase.app/",
+
         projectId: "myhappycloud-6396d",
-        storageBucket: "myhappycloud-6396d.appspot.com",
-        messagingSenderId: "435938126781",
         appId: "1:435938126781:web:541d85d7bca38be72580d4",
       };
-      firebase.initializeApp(firebaseConfig);
-
-      // “kratice” da su ti dostupne svugdje
-      window.auth = firebase.auth();
-      window.db = firebase.database();
     </script>
-
     <script src="Script/script.js"></script>
     <script src="Script/kontakt.js"></script>
   </body>

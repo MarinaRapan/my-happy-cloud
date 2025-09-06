@@ -1399,6 +1399,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
       form.style.position = form.style.position || "relative";
       form.appendChild(box);
+      box.hidden = true;
     }
     let err = form.querySelector(".search-error");
     if (!err) {

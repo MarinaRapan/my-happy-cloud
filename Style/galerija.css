@@ -54,7 +54,6 @@ body {
 }
 /* === MOBILE: bez animacija i hover lifta === */
 @media (max-width: 760px) {
-  /* dropdown je već klik-based ( .dropdown.open ) — uklonimo sve hover efekte kartica */
   .collection-tile {
     animation: none !important;
     transition: none !important;
@@ -145,9 +144,12 @@ body {
   font-size: 1rem;
   line-height: 1.25;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box; /* fallback */
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  line-clamp: 2;
 }
 .card .desc {
   font-size: 0.92rem;
@@ -155,9 +157,12 @@ body {
   line-height: 1.35;
   margin: 2px 0 6px;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
+  overflow: hidden;
+  display: -webkit-box; /* fallback */
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+
+  line-clamp: 2;
 }
 .card .price {
   margin-top: auto;
@@ -262,82 +267,6 @@ body {
   border-radius: 10px;
   padding: 6px 10px;
   cursor: pointer;
-}
-
-/* ===== DROPDOWN (mobile friendly) ===== */
-.dropdown .dropdown-content {
-  display: none;
-  max-height: 70vh;
-  overflow-y: auto;
-  z-index: 1000;
-}
-/* Tap-targeti unutar dropdowna */
-.dropdown .dropdown-content a {
-  display: block;
-  padding: 0.6rem 0.8rem;
-  color: #fff;
-  text-decoration: none;
-}
-.dropdown .dropdown-content a:active {
-  opacity: 0.85;
-}
-
-.dropdown.open > .dropdown-content {
-  display: block;
-}
-@media (hover: none) {
-  .dropdown:hover > .dropdown-content {
-    display: none !important;
-  }
-  .dropdown.open > .dropdown-content {
-    display: block !important;
-  }
-  .card figure::after {
-    transform: none;
-  }
-}
-/* Mobile layout dropdowna */
-@media (max-width: 760px) {
-  .dropdown .dropdown-content {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 60px;
-    width: auto;
-    max-width: 100%;
-    box-sizing: border-box;
-    display: none; /* default zatvoreno */
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.5rem;
-    padding: 1rem;
-    background: rgb(75, 65, 75);
-    z-index: 11000; /* iznad headera */
-  }
-
-  /* KAD JE OTVOREN → prikaži kao grid */
-  .dropdown.open > .dropdown-content {
-    display: grid !important;
-  }
-  .dropdown .dropdown-content a {
-    display: block;
-    width: 100%;
-    padding: 0.6rem 0.8rem;
-    text-decoration: none;
-  }
-  /* Na mobitelu ne reagiraj na :hover (touch) */
-  .dropdown:hover > .dropdown-content {
-    display: none !important;
-  }
-}
-@media (max-width: 600px) {
-  .dropdown .dropdown-content {
-    grid-template-columns: 1fr;
-  }
-}
-@media (max-width: 380px) {
-  .dropdown .dropdown-content {
-    grid-template-columns: 1fr;
-  }
 }
 /* ===== COLLECTION ANIMATIONS ===== */
 @media (prefers-reduced-motion: no-preference) {
@@ -471,21 +400,4 @@ body {
         0 8px 20px rgba(0, 0, 0, 0.06);
     }
   }
-}
-/* Jedna kolona već od 600px na niže (556 fix) */
-@media (max-width: 600px) {
-  .dropdown .dropdown-content {
-    grid-template-columns: 1fr !important;
-  }
-}
-
-/* Veći tap-target + safety z-index */
-.dropdown .dropdown-content a {
-  display: block;
-  width: 100%;
-  padding: 0.6rem 0.8rem;
-  text-decoration: none;
-}
-.dropdown .dropdown-content {
-  z-index: 11000;
 }

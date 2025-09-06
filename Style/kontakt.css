@@ -187,27 +187,6 @@
     clip-path: none !important;
   }
 }
-/* ——— HERO: osnovni layout (full-bleed) ——— */
-.kontakt-hero {
-  display: block;
-  margin: 0 0 clamp(14px, 3vw, 24px);
-}
-.kontakt-hero .hero-media {
-  position: relative;
-  width: 100vw;
-  margin-left: 50%;
-  transform: translateX(-50%);
-  height: clamp(260px, 52vh, 640px);
-  overflow: hidden;
-}
-.kontakt-hero .hero-media img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  will-change: transform, opacity, clip-path, height;
-}
 .kontakt-hero .hero-text {
   padding-top: clamp(16px, 3vw, 24px);
   transition: padding 0.3s ease;
@@ -290,4 +269,61 @@
   .kontakt-hero[data-mode="scroll-hide"].collapsed .hero-text {
     padding-top: 0;
   }
+}
+/* === Social icon buttons (brand-correct) === */
+.socials .social {
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+}
+.socials .social .icon {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.socials .social.fb .icon {
+  fill: #1877f2;
+}
+.socials .social.insta .icon {
+  fill: #e4405f;
+}
+.socials .social:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* === Hero image not full-width; center and breathe === */
+.kontakt-hero .hero-media {
+  display: grid;
+  place-items: center;
+}
+.kontakt-hero .hero-media img {
+  width: min(420px, 90%);
+  height: auto;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* === Hero text soft fade-up (when .is-animate is added by JS) === */
+.kontakt-hero .hero-text {
+  opacity: 0.001;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease 0.1s, transform 0.5s ease 0.1s;
+}
+.kontakt-hero.is-animate .hero-text {
+  opacity: 1;
+  transform: none;
+}
+
+/* === Form status message === */
+.form-status {
+  margin-top: 8px;
+  font-size: 0.95rem;
+  color: #2e7d32;
+}
+.form-status.error {
+  color: #c62828;
 }
