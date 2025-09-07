@@ -2,7 +2,9 @@ let allProducts = [];
 let currentCategory = "home"; // početno: početna stranica, bez tooltips
 
 // Učitaj proizvode
-fetch("Script/products.json")
+fetch(new URL("Script/products.json", document.baseURI).href, {
+  cache: "no-store",
+})
   .then((r) => r.json())
   .then((products) => {
     allProducts = products;

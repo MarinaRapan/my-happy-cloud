@@ -83,8 +83,8 @@
     "data-product": "heart4",
     "data-category": "heart",
     "data-filter": "heart",
-    "description": "Broševi u obliku srca, crveni i cvijetni - filc, pakiranje 2 komada",
-    "price": "50 ",
+    "description": "Broševi u obliku srca, crveni - filc, i cvijetni - Punjena tkanina - 3D, 2 komada",
+    "price": "60 ",
     "status": "active"
   },
   {
@@ -106,7 +106,7 @@
     "data-category": "letters",
     "data-filter": "letters",
     "description": "Letters Za Kuhinju, rstorane, kafiće, isti - u drugoj boji ili drugi naziv dostupan po narudžbi",
-    "price": "40 ",
+    "price": "50 ",
     "status": "active"
   },
   {
@@ -117,7 +117,7 @@
     "data-category": "letters",
     "data-filter": "letters",
     "description": "Letters natpisa Ljubav, isti - u drugoj boji ili drugog dostupan po narudžbi",
-    "price": "35 ",
+    "price": "42 ",
     "status": "active"
   },
   {
@@ -128,7 +128,7 @@
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
     "description": "Ogrlica iz kolekcije -Aj lipo sidi-, kombinacija Aluminija, čelika i konopa ",
-    "price": "50 ",
+    "price": "55 ",
     "status": "active"
   },
   {
@@ -171,7 +171,7 @@
     "data-product": "anticGreeceInspo4",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "Ogrlica za u nebesko plavoj boji, tkanina i starog zlata",
+    "description": "Ogrlica u nebesko plavoj boji, tkanina i metal sa efektom starog zlata",
     "price": "40 ",
     "status": "active"
   },
@@ -326,8 +326,8 @@
     "data-product": "doYouDare6",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Žuta, Tkanina i plastika",
+    "price": "50 ",
     "status": "active"
   },
   {
@@ -337,8 +337,8 @@
     "data-product": "doYouDare7",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Crvena, Tkanina i Aluminij",
+    "price": "70 ",
     "status": "active"
   },
   {
@@ -348,8 +348,8 @@
     "data-product": "doYouDare8",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Puder, Tkanina i Aluminij",
+    "price": "70 ",
     "status": "active"
   },
   {
@@ -359,8 +359,8 @@
     "data-product": "doYouDare9",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Crvena, Tkanina i Bakar",
+    "price": "45 ",
     "status": "active"
   },
   {
@@ -370,8 +370,8 @@
     "data-product": "doYouDare10",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Zelena, Tkanina i Aluminij",
+    "price": "60 ",
     "status": "active"
   },
   {
@@ -381,8 +381,8 @@
     "data-product": "doYouDare11",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Zelena, Tkanina i Plastika",
+    "price": "40 ",
     "status": "active"
   },
   {
@@ -392,8 +392,8 @@
     "data-product": "doYouDare12",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Šarena, Tkanina i Plastika",
+    "price": "50 ",
     "status": "active"
   },
   {
@@ -403,8 +403,8 @@
     "data-product": "doYouDare13",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Šarena, Tkanina i Plastika",
+    "price": "55 ",
     "status": "active"
   },
   {
@@ -414,8 +414,8 @@
     "data-product": "doYouDare14",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Roza, Tkanina i Aluminij",
+    "price": "60",
     "status": "active"
   },
   {
@@ -425,8 +425,8 @@
     "data-product": "doYouDare15",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica 2 u 1 iz kolekcije -Do You Dare, Roza, Tkanina i Aluminij + lancić sa privjeskom - efekt srebra",
+    "price": "80 ",
     "status": "active"
   },
   {
@@ -436,8 +436,8 @@
     "data-product": "doYouDare16",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Žuta, Tkanina i Aluminij",
+    "price": "60 ",
     "status": "active"
   },
   {
@@ -447,8 +447,8 @@
     "data-product": "doYouDareArtistic",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Crno plava, Konop i plastika",
+    "price": "60 ",
     "status": "active"
   },
   {
@@ -458,8 +458,8 @@
     "data-product": "backTo80",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Šarena, Tkanina i Plastika",
+    "price": "50",
     "status": "active"
   },
   {
@@ -469,8 +469,8 @@
     "data-product": "doYouDareInZagreb",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Žuta, Tkanina i Aluminij",
+    "price": "60 ",
     "status": "active"
   },
   {
@@ -480,8 +480,8 @@
     "data-product": "doYouDareInYellow",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Do You Dare, Žuta, Tkanina, Konop, Vuna i Aluminij",
+    "price": "100 ",
     "status": "active"
   },
   {
@@ -491,8 +491,8 @@
     "data-product": "guma",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Gumena ogrlica, Crno, Bijelo, Crvena,  ",
+    "price": "40 ",
     "status": "active"
   },
   {
@@ -502,8 +502,8 @@
     "data-product": "hera1",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Vuna na konopu, Crno žuta",
+    "price": "70 ",
     "status": "active"
   },
   {
@@ -513,8 +513,8 @@
     "data-product": "hera2",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Vuna na konopu, Crno bijela sa kolorom",
+    "price": "80 ",
     "status": "active"
   },
   {
@@ -524,8 +524,8 @@
     "data-product": "lady",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Lančić sa privjeskom kompasa i bijele perle",
+    "price": "45 ",
     "status": "active"
   },
   {
@@ -535,8 +535,8 @@
     "data-product": "lostinspace",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Kolorni konop sa odgovarajućim aluminijskim Privjeskom",
+    "price": "60 ",
     "status": "active"
   },
   {
@@ -546,8 +546,8 @@
     "data-product": "loveIsAllAround",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Gumeno plastična Ogrlica, podesiva, u Zelenoj boji",
+    "price": "40 ",
     "status": "active"
   },
   {
@@ -557,8 +557,8 @@
     "data-product": "matiDalmacija",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Azurno plava Ogrlica sa privjeskom kompasa, konop i metal",
+    "price": "60",
     "status": "active"
   },
   {
@@ -568,19 +568,8 @@
     "data-product": "myHappyHeartNecklace",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
-    "status": "active"
-  },
-  {
-    "title": "My Happy Ogrlice",
-    "image": "Slike/Ogrlice/nestasna.png",
-    "Naziv proizvoda": "Nestašna",
-    "data-product": "nestasna",
-    "data-category": "ogrlice",
-    "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica sa velikim srebrnim, rezbarenim srcem srebrne boje, na Tkanini",
+    "price": "55",
     "status": "active"
   },
   {
@@ -590,19 +579,8 @@
     "data-product": "ogrlicaOdijelo",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
-    "status": "active"
-  },
-  {
-    "title": "My Happy Ogrlice",
-    "image": "Slike/Ogrlice/Pletivo.png",
-    "Naziv proizvoda": "Ogrlica od Pletiva",
-    "data-product": "pletivo",
-    "data-category": "ogrlice",
-    "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ozbiljna, decentna ogrlica - Guma i aluminij",
+    "price": "40 ",
     "status": "active"
   },
   {
@@ -612,8 +590,8 @@
     "data-product": "raskoshna1",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica u cvijetnoj tkanini, tkanina i metal sa efektom starog zlata",
+    "price": "45 ",
     "status": "active"
   },
   {
@@ -623,8 +601,8 @@
     "data-product": "raskoshna2",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica u cvijetnoj tkanini, tkanina i metal sa efektom starog zlata",
+    "price": "45 ",
     "status": "active"
   },
   {
@@ -634,8 +612,8 @@
     "data-product": "royal",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica u Plavoj boji, tkanina i metal sa efektom starog zlata",
+    "price": "40",
     "status": "active"
   },
   {
@@ -645,8 +623,8 @@
     "data-product": "samoTiSeCiniDaSTvoja",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Žuto Crni Konop i Aluminijska pločica",
+    "price": "45 ",
     "status": "active"
   },
   {
@@ -656,8 +634,8 @@
     "data-product": "shaiba1",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Shaiba-, Crno - bijela, Guma, metalni djelovi i Aluminij",
+    "price": "50 ",
     "status": "active"
   },
   {
@@ -667,8 +645,8 @@
     "data-product": "shaiba2",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Shaiba-, Crno - bijela, Guma, metalni djelovi i Aluminij",
+    "price": "50 ",
     "status": "active"
   },
   {
@@ -678,8 +656,8 @@
     "data-product": "shaiba3",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije, posebna - nosiva i *naopako* -Shaiba-, Crno - bijela, Guma, metalni djelovi i Aluminij",
+    "price": "50 ",
     "status": "active"
   },
   {
@@ -689,8 +667,8 @@
     "data-product": "shaiba4",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Shaiba-, 3 u 1, Crno - bijela, Guma, metalni djelovi i Aluminij",
+    "price": "125 ",
     "status": "active"
   },
   {
@@ -700,8 +678,8 @@
     "data-product": "shaiba5",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Shaiba-, Crno - bijela, Konop i metalni djelovi",
+    "price": "40 ",
     "status": "active"
   },
 
@@ -712,8 +690,8 @@
     "data-product": "statement1",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Statement-, Crno - crveni konop, i Aluminij",
+    "price": "55 ",
     "status": "active"
   },
   {
@@ -723,8 +701,8 @@
     "data-product": "statement2",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Statement-, Crna tkanina i bakar",
+    "price": "40",
     "status": "active"
   },
   {
@@ -734,8 +712,8 @@
     "data-product": "statement3",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica iz kolekcije -Statement-, Žuta tkanina i Aluminij",
+    "price": "65 ",
     "status": "active"
   },
   {
@@ -745,8 +723,8 @@
     "data-product": "strong",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Diskretna romantična ogrlica, metalna suza na tankom konpu",
+    "price": "35 ",
     "status": "active"
   },
   {
@@ -756,8 +734,8 @@
     "data-product": "tokioDrift",
     "data-category": "ogrlice",
     "data-filter": "ogrlice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica bijela, konopi, guma i aluminij",
+    "price": "85 ",
     "status": "active"
   },
   {
@@ -767,8 +745,8 @@
     "data-product": "ajLipoSidi",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Narukvica, guma i konop, Crna",
+    "price": "35 ",
     "status": "active"
   },
   {
@@ -778,8 +756,8 @@
     "data-product": "barbieXenaWarriorPrincess",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Narukvica, guma i konop, Crna sa rozim detaljem",
+    "price": "30",
     "status": "active"
   },
   {
@@ -789,8 +767,8 @@
     "data-product": "confucius",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica na konopu sa privjeskom, Roza",
+    "price": "15 ",
     "status": "active"
   },
   {
@@ -800,8 +778,8 @@
     "data-product": "customMade",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Podesiva narukvica,Crna, metal, guma i aluminij",
+    "price": "22 ",
     "status": "active"
   },
   {
@@ -811,8 +789,8 @@
     "data-product": "dalmatinka",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica na konopu sa drvenim privjeskom, Smeđa",
+    "price": "15 ",
     "status": "active"
   },
   {
@@ -822,8 +800,8 @@
     "data-product": "lavaQueen",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Narukvica nizani lava stone i metalne perle, Roza",
+    "price": "30 ",
     "status": "active"
   },
   {
@@ -833,8 +811,8 @@
     "data-product": "london-lava-stone",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Narukvica nizani lava stone i metalne perle, Roza",
+    "price": "25",
     "status": "active"
   },
   {
@@ -844,8 +822,8 @@
     "data-product": "lookingForTheSummer",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Narukvica nizani lava stone i metalne i plastične perle, Šereno",
+    "price": "25",
     "status": "active"
   },
   {
@@ -855,8 +833,8 @@
     "data-product": "muskaNarukvica",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Unisex narukvica napravljena za muškarca, konop i Aluminij",
+    "price": "30 ",
     "status": "active"
   },
   {
@@ -866,8 +844,8 @@
     "data-product": "nedostupna",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "arukvica, guma i konop, Crna",
+    "price": "25",
     "status": "active"
   },
   {
@@ -877,30 +855,8 @@
     "data-product": "rope",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
-    "status": "active"
-  },
-  {
-    "title": "My Happy Narukvice",
-    "image": "Slike/Ogrlice/SHAIBA1.png",
-    "Naziv proizvoda": "Shaiba1",
-    "data-product": "shaiba1",
-    "data-category": "narukvice",
-    "data-filter": "narukvice",
-    "description": "",
-    "price": "",
-    "status": "active"
-  },
-  {
-    "title": "My Happy Narukvice",
-    "image": "Slike/Ogrlice/SHAIBA2.png",
-    "Naziv proizvoda": "Shaiba2",
-    "data-product": "shaiba2",
-    "data-category": "narukvice",
-    "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Narukvica - Unisex, konop i opet konop",
+    "price": "18 ",
     "status": "active"
   },
   {
@@ -910,8 +866,8 @@
     "data-product": "sidra",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica na konopu sa privjeskom, Roza - 2 u 1",
+    "price": "22",
     "status": "active"
   },
   {
@@ -921,8 +877,8 @@
     "data-product": "sidro",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica na konopu sa privjeskom, Roza",
+    "price": "17",
     "status": "active"
   },
   {
@@ -932,8 +888,8 @@
     "data-product": "simple",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Narukvica, metal i konop, Crna",
+    "price": "18 ",
     "status": "active"
   },
   {
@@ -943,8 +899,8 @@
     "data-product": "simplicity",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica na konopu sa plastičnim privjeskom, Smeđa",
+    "price": "15 ",
     "status": "active"
   },
   {
@@ -954,8 +910,8 @@
     "data-product": "summerColors",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Bogata Ogrlica, Metalni, Plastični, Drveni privjesci - konop i lanac",
+    "price": "40 ",
     "status": "active"
   },
   {
@@ -965,8 +921,8 @@
     "data-product": "unisex",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica na konopu sa metalnim privjeskom, Unisex - crvena",
+    "price": "18 ",
     "status": "active"
   },
   {
@@ -976,8 +932,8 @@
     "data-product": "urbanXenaWarriorPrincess",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Narukvica, guma tkanina, Crno - Plava",
+    "price": "23 ",
     "status": "active"
   },
   {
@@ -987,8 +943,8 @@
     "data-product": "vrtniPrkos",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Ogrlica na konopu sa metalnim privjeskom, Unisex - crvena",
+    "price": "18 ",
     "status": "active"
   },
   {
@@ -998,8 +954,8 @@
     "data-product": "urbanXenaWarrior",
     "data-category": "narukvice",
     "data-filter": "narukvice",
-    "description": "",
-    "price": "",
+    "description": "Narukvica, guma, koža i konop, Crno - Smeđa",
+    "price": "40 ",
     "status": "active"
   },
   {
@@ -1009,8 +965,8 @@
     "data-product": "nanognica1",
     "data-category": "nanognice",
     "data-filter": "nanognice",
-    "description": "",
-    "price": "",
+    "description": "Nanognica na konopu sa privjeskom od lančića, crna",
+    "price": "18 ",
     "status": "active"
   },
   {
@@ -1020,8 +976,8 @@
     "data-product": "nanognica2",
     "data-category": "nanognice",
     "data-filter": "nanognice",
-    "description": "",
-    "price": "",
+    "description": "Nanognica na konopu sa staro zlato privjeskom, smeđa",
+    "price": "16 ",
     "status": "active"
   },
   {
@@ -1031,8 +987,8 @@
     "data-product": "nanognica3",
     "data-category": "nanognice",
     "data-filter": "nanognice",
-    "description": "",
-    "price": "",
+    "description": "Nanognica na konopu sa metalnim privjeskom, Ljubičasto",
+    "price": "16",
     "status": "active"
   },
   {
@@ -1042,8 +998,8 @@
     "data-product": "nanognica4",
     "data-category": "nanognice",
     "data-filter": "nanognice",
-    "description": "",
-    "price": "",
+    "description": "Nanognica na konopu sa privjeskom, Smeđa",
+    "price": "16 ",
     "status": "active"
   },
   {
@@ -1053,8 +1009,8 @@
     "data-product": "nanognica5",
     "data-category": "nanognice",
     "data-filter": "nanognice",
-    "description": "",
-    "price": "",
+    "description": "Nanognica na konopu sa privjeskom, Smeđa",
+    "price": "17",
     "status": "active"
   },
   {
@@ -1086,7 +1042,7 @@
     "data-product": "oblak1",
     "data-category": "brosevi",
     "data-filter": "brosevi",
-    "description": "",
+    "description": "My Happy Cloud kolekcija - broš, plavo - bijeli, filc, vuna i cirkoni",
     "price": "45 ",
     "status": "active"
   },
@@ -1097,7 +1053,7 @@
     "data-product": "oblak2",
     "data-category": "brosevi",
     "data-filter": "brosevi",
-    "description": "My Happy Cloud kolekcija - broš, plavo - bijeli, filc, vuna i cirkoni ",
+    "description": "My Happy Cloud kolekcija - broš, Crveno - bijeli, filc, vuna i zlatni cirkoni ",
     "price": "45 ",
     "status": "active"
   },
@@ -1108,7 +1064,7 @@
     "data-product": "oblak3",
     "data-category": "brosevi",
     "data-filter": "brosevi",
-    "description": "My Happy Cloud kolekcija - broš, crveno - bijeli, filc, vuna i cirkoni",
+    "description": "My Happy Cloud kolekcija - broš, bijeli - crne točkice , filc, vuna i cirkoni",
     "price": "45 ",
     "status": "active"
   },
@@ -1152,8 +1108,8 @@
     "data-product": "brosh6",
     "data-category": "brosevi",
     "data-filter": "brosevi",
-    "description": "",
-    "price": "",
+    "description": "Broš sa biserima i lančićima na metalnoj bazi",
+    "price": "40 ",
     "status": "active"
   },
   {
@@ -1164,7 +1120,7 @@
     "data-category": "brosevi",
     "data-filter": "brosevi",
     "description": "My Happy Cloud kolekcija - broš, sivo - bijeli, filc, vuna i cirkoni",
-    "price": "",
+    "price": "50 ",
     "status": "active"
   },
   {
@@ -1174,8 +1130,8 @@
     "data-product": "brosh8",
     "data-category": "brosevi",
     "data-filter": "brosevi",
-    "description": "",
-    "price": "",
+    "description": "Broš sa šarenim, plastičnim i metalnim perlicama i lančićima",
+    "price": "40 ",
     "status": "active"
   },
   {
@@ -1185,7 +1141,7 @@
     "data-product": "brosh10",
     "data-category": "brosevi",
     "data-filter": "brosevi",
-    "description": "",
+    "description": "Crno crveni broš, svila i plastično srce",
     "price": "",
     "status": "active"
   },
@@ -1196,8 +1152,8 @@
     "data-product": "brosh11",
     "data-category": "brosevi",
     "data-filter": "brosevi",
-    "description": "",
-    "price": "",
+    "description": "Broševi 3 u 1, vuneni sa metalnom žicom, filc sa dekoracijom x2",
+    "price": "70 ",
     "status": "active"
   },
   {
@@ -1207,8 +1163,8 @@
     "data-product": "brosh13",
     "data-category": "brosevi",
     "data-filter": "brosevi",
-    "description": "",
-    "price": "",
+    "description": "Broš sa lančićem na metalnoj bazi",
+    "price": "29 ",
     "status": "active"
   },
   {
@@ -1218,8 +1174,8 @@
     "data-product": "mm1",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "3 u 1, Narukvica na konopu sa staro zlato privjeskom, smeđa",
+    "price": "40 ",
     "status": "active"
   },
   {
@@ -1229,8 +1185,8 @@
     "data-product": "mm2",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "4 u 1, Narukvice na konopu sa privjeskom, šareno",
+    "price": "50 ",
     "status": "active"
   },
   {
@@ -1240,8 +1196,8 @@
     "data-product": "mm3",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "3 u 1, Narukvice na konopu, sa lančićem, privjescima konopom, mix, šareno",
+    "price": "65 ",
     "status": "active"
   },
   {
@@ -1251,8 +1207,8 @@
     "data-product": "mm4",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "2 u 1 ogrlica",
+    "price": "70 ",
     "status": "active"
   },
   {
@@ -1262,8 +1218,8 @@
     "data-product": "mm5",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "3 u 1 ogrlica",
+    "price": "70 ",
     "status": "active"
   },
   {
@@ -1273,8 +1229,8 @@
     "data-product": "mm6",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "5 u 1, Narukvice na konopu sa privjeskom, šareno",
+    "price": "60 ",
     "status": "active"
   },
   {
@@ -1295,8 +1251,8 @@
     "data-product": "mm8",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "4 u 1, Narukvice na konopu sa perlama i privjescima, šareno",
+    "price": "65 ",
     "status": "active"
   },
   {
@@ -1306,8 +1262,8 @@
     "data-product": "mm9",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "Kombinacija Ogrlica i narukvice, razno",
+    "price": "50 ",
     "status": "active"
   },
   {
@@ -1317,8 +1273,8 @@
     "data-product": "mm10",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "2 u 1 ogrlica",
+    "price": "70 ",
     "status": "active"
   },
   {
@@ -1328,8 +1284,8 @@
     "data-product": "mm11",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "3 u 1, Narukvice na konopu sa perlama, slovima, konopom i privjescima, šareno",
+    "price": "45 ",
     "status": "active"
   },
   {
@@ -1339,30 +1295,8 @@
     "data-product": "mm12",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
-    "status": "active"
-  },
-  {
-    "title": "Mix & Match",
-    "image": "Slike/MixAndMatch/SummerEdition1.png",
-    "Naziv proizvoda": "Summer edition 3 - narukvice",
-    "data-product": "mm13",
-    "data-category": "mixandmatch",
-    "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
-    "status": "active"
-  },
-  {
-    "title": "Mix & Match",
-    "image": "Slike/MixAndMatch/SummerEdition4.png",
-    "Naziv proizvoda": "Summer edition 4 - narukvice",
-    "data-product": "mm14",
-    "data-category": "mixandmatch",
-    "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "3 u 1, Narukvice na konopu sa perlama, slovima, konopom i privjescima, šareno",
+    "price": "45 ",
     "status": "active"
   },
   {
@@ -1372,8 +1306,8 @@
     "data-product": "mm15",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "2 u 1, Narukvica sa perlama, i narukvica sa konopom i privjescima, Crno sa metalom",
+    "price": "30 ",
     "status": "active"
   },
   {
@@ -1383,8 +1317,19 @@
     "data-product": "mm16",
     "data-category": "mixandmatch",
     "data-filter": "mixAndMatch",
-    "description": "",
-    "price": "",
+    "description": "2 u 1 ogrlica",
+    "price": "55 ",
+    "status": "active"
+  },
+  {
+    "title": "Privjesci",
+    "image": "Slike/PrivjesakTorba/istakniSe.png",
+    "Naziv proizvoda": "Istakni se",
+    "data-product": "pt1",
+    "data-category": "privjesci",
+    "data-filter": "Privjesci",
+    "description": "Personalizirani privjesak za torbe i ruksake",
+    "price": "50 ",
     "status": "active"
   }
 ]

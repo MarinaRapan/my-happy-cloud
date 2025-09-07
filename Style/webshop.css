@@ -77,7 +77,7 @@
 }
 .card h4 {
   font-size: 1.4rem;
-  color: rgba(91, 61, 80, 0.85);
+  color: #333 !important;
   font-weight: 700;
   margin: 0 0 6px 0;
   text-align: center;
@@ -252,24 +252,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-/* === CATEGORY VIEW (product-modal) tweaks === */
-#product-modal .card {
-  justify-content: flex-start;
-}
-#product-modal .card img {
-  max-height: 360px;
-  object-fit: cover;
-}
-#product-modal .card h3 {
-  font-size: 0.95rem;
-  line-height: 1.2;
-  margin: 6px 0 6px;
-}
-#product-modal .card .more-btn {
-  margin-top: 10px !important;
-  align-self: center;
 }
 
 /* === Mobile / responsive === */

@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       heart: {
         title: "My Happy Heart",
-        desc: "Broš, dostupan i kao ukras za bor – podiže vaše modne kombinacije.",
+        desc: "Broš, dostupan i kao ukras za bor – podiže vaše modne kombinacije. Cijena se formira po broju slova",
       },
       letters: {
         title: "My Happy Letters",
@@ -294,6 +294,10 @@ document.addEventListener("DOMContentLoaded", () => {
       narukvice: {
         title: "My Happy Narukvice",
         desc: "Dostupne i po narudžbi, mix & match.",
+      },
+      mixandmatch: {
+        title: "Mix & Match",
+        desc: "Mix and Match, kombinacije za povoljniju kupnju.",
       },
       privjesci: {
         title: "My Happy Privjesci",

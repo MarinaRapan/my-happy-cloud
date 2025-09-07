@@ -1577,3 +1577,55 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })();
 })();
+/* =====================================================
+ * SHARED HELPERS (global) — imgUrl, fetchProducts
+ * ===================================================*/
+(function () {
+  window.MHC = window.MHC || {};
+
+  const PRODUCT_PATHS = ["Script/products.json"];
+
+  window.MHC.fetchProducts = async function fetchProducts() {
+    const tried = [];
+    for (const p of PRODUCT_PATHS) {
+      try {
+        const r = await fetch(p, { cache: "no-store" });
+        tried.push(`${p} → ${r.status}`);
+        if (r.ok) {
+          const data = await r.json();
+          if (Array.isArray(data)) {
+            const a = document.createElement("a");
+            a.href = p;
+            window.__ASSET_BASE = a.href.replace(
+              /Script\/products\.json(\?.*)?$/,
+              ""
+            );
+            console.log("[Shared] Asset base:", window.__ASSET_BASE);
+            return data;
+          }
+        }
+      } catch (err) {
+        tried.push(`${p} → ERROR ${err?.message || err}`);
+      }
+    }
+    throw new Error(
+      "Ne mogu učitati products.json. Pokušano:\n" + tried.join("\n")
+    );
+  };
+
+  window.MHC.imgUrl = function imgUrl(src) {
+    if (!src) return "";
+    let s = String(src)
+      .trim()
+      .replace(/\\/g, "/")
+      .replace(/(^|[^:])\/{2,}/g, (_, a) => (a || "") + "/");
+    if (/^(https?:)?\/\//i.test(s)) return s;
+    s = s.replace(/^\/+/, "");
+    if (window.__ASSET_BASE) {
+      try {
+        return new URL(s, window.__ASSET_BASE).href;
+      } catch {}
+    }
+    return s.startsWith("./") ? s : "./" + s;
+  };
+})();
