@@ -269,16 +269,27 @@
       </div>
       <p>Copyright © 2025 by My Happy Cloud.<br />All right´s reserved</p>
     </footer>
-
     <script>
-      // 🔧 Postavi Firebase config: zamijeni vrijednosti i ostavi ovaj blok iznad kontakt.js
       window.__FIREBASE_CONFIG = {
         apiKey: "AIzaSyA7yi0y539YQC1s6ZVjAkDejFHdkM8zpLc",
         authDomain: "myhappycloud-6396d.firebaseapp.com",
-
         projectId: "myhappycloud-6396d",
         appId: "1:435938126781:web:541d85d7bca38be72580d4",
+        databaseURL:
+          "https://myhappycloud-6396d-default-rtdb.europe-west1.firebasedatabase.app" /* ⬅️ bez '/' na kraju */,
       };
+    </script>
+
+    <!-- 2) Firebase COMPAT SDK-ovi (isti stil kao ostatak projekta) -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-database-compat.js"></script>
+
+    <!-- 3) Inicijalizacija + globali za script.js -->
+    <script>
+      firebase.initializeApp(window.__FIREBASE_CONFIG);
+      window.auth = firebase.auth();
+      window.db = firebase.database();
     </script>
     <script src="Script/script.js"></script>
     <script src="Script/kontakt.js"></script>
